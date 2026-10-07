@@ -59,6 +59,7 @@ This creates two illustrative missions and a working preview. It is deliberately
 
 ```text
 AGENTS.md                  country-neutral guidance for a fresh AI session
+CLAUDE.md -> AGENTS.md      the same instructions for Claude Code
 workbench/                 shared build, checks, installer and existing HTML viewer
 tests/                     structural regressions and optional browser checks
 mods/teutonic/
