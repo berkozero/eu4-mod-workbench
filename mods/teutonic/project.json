@@ -1,0 +1,253 @@
+{
+  "name": "The Order Without End \u2014 Crusader Continuation",
+  "slug": "order_without_end",
+  "tag": "TEU",
+  "namespace": "teux",
+  "supported_version": "1.37.*",
+  "tested_game_version": "1.37.2",
+  "base_mission_files": [
+    "SCA_Teutonic_Missions.txt",
+    "EMP_Prussian_Missions.txt",
+    "Brandenburgian_and_Prussian_Missions.txt"
+  ],
+  "primary_mission_file": "SCA_Teutonic_Missions.txt",
+  "baseline_ids": {
+    "V01": "teu_seek_imperial_protection",
+    "V02": "teu_livonian_alliance",
+    "V03": "teu_strengthen_livonia",
+    "V04": "teu_handle_the_prussian_confederation",
+    "V05": "teu_defeat_the_poles",
+    "V06": "teu_build_to_force_limit",
+    "V07": "teu_crusader_clergy_influence",
+    "V08": "teu_crusader_conquer_novgorod",
+    "V09": "teu_crusader_third_rome",
+    "V10": "teu_crusader_end_the_schism",
+    "V11": "teu_crusader_land_of_churches",
+    "V12": "teu_crusader_build_cathedrals",
+    "V13": "teu_crusader_lithuanian_crusade",
+    "V14": "teu_crusader_conquer_crimea",
+    "V15": "teu_crusader_fortify_the_caucasus",
+    "V16": "teu_crusader_bulwark_against_the_turks",
+    "V17": "teu_crusader_conquer_poland",
+    "V18": "teu_crusader_push_into_ruthenia",
+    "V19": "teu_crusader_eliminate_the_great_horde",
+    "V20": "teu_crusader_steppes_crusade",
+    "V21": "teu_crusader_a_holy_horde",
+    "V22": "teu_crusader_mil_reform_1",
+    "V23": "teu_crusader_mil_reform_2",
+    "V24": "teu_crusader_mil_reform_3",
+    "V25": "teu_crusader_mil_reform_4",
+    "V26": "teu_crusader_secure_papal_alliance",
+    "V27": "teu_crusader_embrace_religious_ideas",
+    "V28": "teu_crusader_convert_provinces",
+    "V29": "teu_crusader_gain_income",
+    "V30": "teu_crusader_castle_expertise",
+    "V31": "teu_crusader_survive_the_reformation",
+    "V32": "teu_crusader_destroy_the_heresies"
+  },
+  "native_series_by_slot": {
+    "1": "teu_crusader_russia_mission_slot",
+    "2": "teu_crusader_more_conquest_mission_slot",
+    "3": "teu_crusader_eastern_conquest_mission_slot",
+    "4": "teu_crusader_military_mission_slot",
+    "5": "teu_crusader_development_mission_slot"
+  },
+  "path_flag": "teu_crusader_path",
+  "path_choice_mission": "V05",
+  "start_mission": "V06",
+  "loading_rotation": true,
+  "expected_missions": 88,
+  "chapters": [
+    [
+      "V06",
+      "Vanilla opening"
+    ],
+    [
+      "I01",
+      "Optional support tasks"
+    ],
+    [
+      "V21",
+      "Holy Horde"
+    ],
+    [
+      "N01",
+      "Northern chapters"
+    ],
+    [
+      "E01",
+      "Persia & India"
+    ],
+    [
+      "M01",
+      "Mongolia & China"
+    ],
+    [
+      "S01",
+      "Southern mandate"
+    ],
+    [
+      "S04",
+      "Jerusalem and beyond"
+    ],
+    [
+      "C01",
+      "Institutions"
+    ],
+    [
+      "C08",
+      "Final general chapter"
+    ]
+  ],
+  "base_sha256": {
+    "SCA_Teutonic_Missions.txt": "e1ca246cb218674d611c0879369a8736bf27ce105b16ed89bacd3cb80297ae9d",
+    "EMP_Prussian_Missions.txt": "4863989f35e42411f5b51e074414b00c2e83d2d33ddb64d2d3ddc1a6159143e5",
+    "Brandenburgian_and_Prussian_Missions.txt": "25b90a4362d65ecb1d8cce4de918f437c9aa6a15f09cbf3601d08f19bff1b4db"
+  },
+  "gated_baseline_ids": [
+    "teu_crusader_clergy_influence",
+    "teu_crusader_conquer_novgorod",
+    "teu_crusader_third_rome",
+    "teu_crusader_end_the_schism",
+    "teu_crusader_land_of_churches",
+    "teu_crusader_build_cathedrals",
+    "teu_crusader_lithuanian_crusade",
+    "teu_crusader_conquer_crimea",
+    "teu_crusader_fortify_the_caucasus",
+    "teu_crusader_bulwark_against_the_turks",
+    "teu_crusader_conquer_poland",
+    "teu_crusader_push_into_ruthenia",
+    "teu_crusader_eliminate_the_great_horde",
+    "teu_crusader_steppes_crusade",
+    "teu_crusader_a_holy_horde",
+    "teu_crusader_mil_reform_1",
+    "teu_crusader_mil_reform_2",
+    "teu_crusader_mil_reform_3",
+    "teu_crusader_mil_reform_4",
+    "teu_crusader_secure_papal_alliance",
+    "teu_crusader_embrace_religious_ideas",
+    "teu_crusader_convert_provinces",
+    "teu_crusader_gain_income",
+    "teu_crusader_castle_expertise",
+    "teu_crusader_survive_the_reformation",
+    "teu_crusader_destroy_the_heresies"
+  ],
+  "fixtures": {
+    "opening": {
+      "state": {
+        "tag": "TEU"
+      },
+      "count": 88
+    },
+    "crusader": {
+      "state": {
+        "tag": "TEU",
+        "flags": [
+          "teu_crusader_path"
+        ]
+      },
+      "count": 87
+    },
+    "prussian": {
+      "state": {
+        "tag": "TEU",
+        "flags": [
+          "teu_prussian_path"
+        ]
+      },
+      "count": 31,
+      "same_as_game": "SCA_Teutonic_Missions.txt"
+    },
+    "other_country": {
+      "state": {
+        "tag": "POL"
+      },
+      "count": 0
+    },
+    "missing_dlc": {
+      "state": {
+        "tag": "TEU",
+        "dlc": false
+      },
+      "count": 0
+    },
+    "random_map": {
+      "state": {
+        "tag": "TEU",
+        "random": true
+      },
+      "count": 0
+    }
+  },
+  "claim_routes": [
+    [
+      "E01",
+      "E02"
+    ],
+    [
+      "E02",
+      "E04"
+    ],
+    [
+      "E04",
+      "E05"
+    ],
+    [
+      "E05",
+      "E06"
+    ],
+    [
+      "E06",
+      "E07"
+    ],
+    [
+      "E07",
+      "E09"
+    ],
+    [
+      "S01",
+      "S02"
+    ],
+    [
+      "S02",
+      "S03"
+    ],
+    [
+      "S05",
+      "S06"
+    ],
+    [
+      "S08",
+      "S09"
+    ],
+    [
+      "N01",
+      "N02"
+    ],
+    [
+      "N03",
+      "N05"
+    ],
+    [
+      "N05",
+      "N06"
+    ],
+    [
+      "M01",
+      "M02"
+    ],
+    [
+      "M02",
+      "M03"
+    ],
+    [
+      "M04",
+      "M05"
+    ],
+    [
+      "M06",
+      "M07"
+    ]
+  ],
+  "country_name": "Teutonic Order"
+}

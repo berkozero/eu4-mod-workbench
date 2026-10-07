@@ -1,0 +1,2602 @@
+[
+  {
+    "id": "I01",
+    "scriptId": "teux_i01",
+    "title": "Muster Houses",
+    "lane": 1,
+    "position": 7,
+    "parents": [
+      "V06"
+    ],
+    "trigger": "religion = catholic num_of_owned_provinces_with = {  OR = { has_building = barracks has_building = training_fields } value = 4 } manpower_percentage = 0.25",
+    "conditions": "Remain Catholic. Own 4 provinces with barracks or training fields and have 25% manpower reserves.",
+    "rewards": [
+      {
+        "script": "add_yearly_manpower = 0.5",
+        "text": "+0.5 years of manpower."
+      },
+      {
+        "script": "add_country_modifier = { name = teux_muster_houses duration = 5475 }",
+        "text": "Muster Houses: -5% reinforcement cost (15 years)."
+      }
+    ],
+    "why": "Provision recruitment before the steppe reforms without delaying vanilla access.",
+    "root": "logistics",
+    "intermediate": true,
+    "icon": "mission_teux_i01",
+    "source": {
+      "url": "https://zamek.malbork.pl/en/museum/history-of-the-museum/",
+      "title": "Malbork Castle Museum",
+      "root": "Fortresses, stores, stables and workshops."
+    },
+    "arrowParents": [],
+    "checklistParents": [
+      "V06"
+    ],
+    "gameParents": [],
+    "checklistScript": "mission_completed = teu_build_to_force_limit",
+    "effect": "add_yearly_manpower = 0.5\nadd_country_modifier = { name = teux_muster_houses duration = 5475 }",
+    "conditionText": "Remain Catholic. Own 4 provinces with barracks or training fields and have 25% manpower reserves.",
+    "rewardText": "+0.5 years of manpower. Muster Houses: -5% reinforcement cost (15 years).",
+    "eventIds": [],
+    "claims": []
+  },
+  {
+    "id": "I02",
+    "scriptId": "teux_i02",
+    "title": "Envoys of the Orders",
+    "lane": 3,
+    "position": 7,
+    "parents": [
+      "V03"
+    ],
+    "trigger": "religion = catholic\nOR = { num_of_allies = 3 num_of_subjects = 2 } stability = 1",
+    "conditions": "Remain Catholic. Have +1 stability and either 3 allies or 2 subjects.",
+    "rewards": [
+      {
+        "script": "add_country_modifier = { name = teux_envoys duration = 5475 }",
+        "text": "Envoys of the Orders: +1 diplomatic reputation (15 years)."
+      }
+    ],
+    "why": "Develop the diplomatic solution to the Livonian relationship into a wider network.",
+    "root": "administration",
+    "intermediate": true,
+    "icon": "mission_teux_i02",
+    "source": {
+      "url": "https://deutscher-orden.com/geschichte/",
+      "title": "The Order\u2019s own institutional history",
+      "root": "Commanderies and central administration."
+    },
+    "arrowParents": [],
+    "checklistParents": [
+      "V03"
+    ],
+    "gameParents": [],
+    "checklistScript": "mission_completed = teu_strengthen_livonia",
+    "effect": "add_country_modifier = { name = teux_envoys duration = 5475 }",
+    "conditionText": "Remain Catholic. Have +1 stability and either 3 allies or 2 subjects.",
+    "rewardText": "Envoys of the Orders: +1 diplomatic reputation (15 years).",
+    "eventIds": [],
+    "claims": []
+  },
+  {
+    "id": "I03",
+    "scriptId": "teux_i03",
+    "title": "Northern Provisioners",
+    "lane": 0,
+    "position": 8,
+    "parents": [
+      "V07"
+    ],
+    "trigger": "religion = catholic\nnum_of_owned_provinces_with = { OR = { area = karelia_area area = novgorod_area area = pskov_area } religion = catholic has_trade_building_trigger = yes value = 2 }",
+    "conditions": "Remain Catholic. Directly own 2 Catholic provinces with marketplaces or their upgrades across Karelia, Novgorod and Pskov.",
+    "rewards": [
+      {
+        "script": "define_advisor = { type = trader skill = 2 cost_multiplier = 0.5 religion = ROOT }",
+        "text": "Level-2 Trader of your religion at 50% normal cost."
+      },
+      {
+        "script": "add_years_of_income = 0.5",
+        "text": "+0.5 years of income."
+      }
+    ],
+    "why": "Use the newly claimed Russian foothold to fund supplies for the next campaign.",
+    "root": "logistics",
+    "intermediate": true,
+    "icon": "mission_teux_i03",
+    "source": {
+      "url": "https://zamek.malbork.pl/en/museum/history-of-the-museum/",
+      "title": "Malbork Castle Museum",
+      "root": "Fortresses, stores, stables and workshops."
+    },
+    "arrowParents": [],
+    "checklistParents": [
+      "V07"
+    ],
+    "gameParents": [],
+    "checklistScript": "mission_completed = teu_crusader_clergy_influence",
+    "effect": "define_advisor = { type = trader skill = 2 cost_multiplier = 0.5 religion = ROOT }\nadd_years_of_income = 0.5",
+    "conditionText": "Remain Catholic. Directly own 2 Catholic provinces with marketplaces or their upgrades across Karelia, Novgorod and Pskov.",
+    "rewardText": "Level-2 Trader of your religion at 50% normal cost. +0.5 years of income.",
+    "eventIds": [],
+    "claims": []
+  },
+  {
+    "id": "I04",
+    "scriptId": "teux_i04",
+    "title": "Frontier Legates",
+    "lane": 4,
+    "position": 8,
+    "parents": [
+      "V27"
+    ],
+    "trigger": "religion = catholic\nnum_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {  religion = catholic value = 25 } num_of_owned_provinces_with = {  religion = catholic has_tax_building_trigger = yes value = 10 }",
+    "conditions": "Remain Catholic. Hold 25 Catholic provinces yourself or through non-sovereign subjects, including 10 directly owned Catholic church/cathedral provinces.",
+    "rewards": [
+      {
+        "script": "add_country_modifier = { name = teux_frontier_legates duration = 5475 }",
+        "text": "Frontier Legates: -10% missionary maintenance (15 years)."
+      },
+      {
+        "script": "add_papal_influence = 15",
+        "text": "+15 papal influence."
+      }
+    ],
+    "why": "Support the vanilla conversion target with cheaper administration, not another permanent missionary-strength stack.",
+    "root": "administration",
+    "intermediate": true,
+    "icon": "mission_teux_i04",
+    "source": {
+      "url": "https://deutscher-orden.com/geschichte/",
+      "title": "The Order\u2019s own institutional history",
+      "root": "Commanderies and central administration."
+    },
+    "arrowParents": [],
+    "checklistParents": [
+      "V27"
+    ],
+    "gameParents": [],
+    "checklistScript": "mission_completed = teu_crusader_embrace_religious_ideas",
+    "effect": "add_country_modifier = { name = teux_frontier_legates duration = 5475 }\nadd_papal_influence = 15",
+    "conditionText": "Remain Catholic. Hold 25 Catholic provinces yourself or through non-sovereign subjects, including 10 directly owned Catholic church/cathedral provinces.",
+    "rewardText": "Frontier Legates: -10% missionary maintenance (15 years). +15 papal influence.",
+    "eventIds": [],
+    "claims": []
+  },
+  {
+    "id": "I05",
+    "scriptId": "teux_i05",
+    "title": "Ruthenian Surveys",
+    "lane": 1,
+    "position": 8,
+    "parents": [
+      "V17"
+    ],
+    "trigger": "religion = catholic\nnum_of_owned_provinces_with = { region = ruthenia_region religion = catholic  value = 6 } NOT = { corruption = 1 }",
+    "conditions": "Remain Catholic. Directly own 6 Catholic Ruthenian provinces and keep corruption below 1.",
+    "rewards": [
+      {
+        "script": "every_owned_province = { limit = { region = ruthenia_region religion = catholic } add_local_autonomy = -10 }",
+        "text": "Reduce autonomy by 10 in currently owned Catholic Ruthenian provinces."
+      },
+      {
+        "script": "change_government_reform_progress = 30",
+        "text": "+30 government reform progress."
+      }
+    ],
+    "why": "Consolidate the first settlements before the vanilla requirement expands to 25 converted provinces.",
+    "root": "administration",
+    "intermediate": true,
+    "icon": "mission_teux_i05",
+    "source": {
+      "url": "https://deutscher-orden.com/geschichte/",
+      "title": "The Order\u2019s own institutional history",
+      "root": "Commanderies and central administration."
+    },
+    "arrowParents": [],
+    "checklistParents": [
+      "V17"
+    ],
+    "gameParents": [],
+    "checklistScript": "mission_completed = teu_crusader_conquer_poland",
+    "effect": "every_owned_province = { limit = { region = ruthenia_region religion = catholic } add_local_autonomy = -10 }\nchange_government_reform_progress = 30",
+    "conditionText": "Remain Catholic. Directly own 6 Catholic Ruthenian provinces and keep corruption below 1.",
+    "rewardText": "Reduce autonomy by 10 in currently owned Catholic Ruthenian provinces. +30 government reform progress.",
+    "eventIds": [],
+    "claims": []
+  },
+  {
+    "id": "I06",
+    "scriptId": "teux_i06",
+    "title": "School of Captains",
+    "lane": 1,
+    "position": 9,
+    "parents": [
+      "V23"
+    ],
+    "trigger": "religion = catholic\nnum_of_generals = 2 army_tradition = 50",
+    "conditions": "Remain Catholic. Employ 2 generals and reach 50 army tradition.",
+    "rewards": [
+      {
+        "script": "define_advisor = { type = army_reformer skill = 3 cost_multiplier = 0.25 religion = ROOT }",
+        "text": "Level-3 Army Reformer of your religion at 25% normal cost."
+      }
+    ],
+    "why": "Turn professional experience into an affordable command staff.",
+    "root": "logistics",
+    "intermediate": true,
+    "icon": "mission_teux_i06",
+    "source": {
+      "url": "https://zamek.malbork.pl/en/museum/history-of-the-museum/",
+      "title": "Malbork Castle Museum",
+      "root": "Fortresses, stores, stables and workshops."
+    },
+    "arrowParents": [],
+    "checklistParents": [
+      "V23"
+    ],
+    "gameParents": [],
+    "checklistScript": "mission_completed = teu_crusader_mil_reform_2",
+    "effect": "define_advisor = { type = army_reformer skill = 3 cost_multiplier = 0.25 religion = ROOT }",
+    "conditionText": "Remain Catholic. Employ 2 generals and reach 50 army tradition.",
+    "rewardText": "Level-3 Army Reformer of your religion at 25% normal cost.",
+    "eventIds": [],
+    "claims": []
+  },
+  {
+    "id": "I07",
+    "scriptId": "teux_i07",
+    "title": "Passes and Stores",
+    "lane": 0,
+    "position": 9,
+    "parents": [
+      "V14"
+    ],
+    "trigger": "religion = catholic\nnum_of_owned_provinces_with = { region = crimea_region religion = catholic province_has_current_tech_fort_trigger = yes value = 2 } num_of_owned_provinces_with = {  has_production_building_trigger = yes value = 5 }",
+    "conditions": "Remain Catholic. Own 2 Catholic Crimean provinces with current-tech forts and at least 5 workshop/counting-house provinces nationally.",
+    "rewards": [
+      {
+        "script": "every_owned_province = { limit = { region = crimea_region religion = catholic province_has_current_tech_fort_trigger = yes } add_province_modifier = { name = teux_pass_stores duration = 7300 } }",
+        "text": "Frontier Storehouses: +10% supply limit, -15% local fort maintenance (20 years; qualifying provinces)."
+      }
+    ],
+    "why": "Prepare the existing Crimean frontier to support the Caucasus forts.",
+    "root": "logistics",
+    "intermediate": true,
+    "icon": "mission_teux_i07",
+    "source": {
+      "url": "https://zamek.malbork.pl/en/museum/history-of-the-museum/",
+      "title": "Malbork Castle Museum",
+      "root": "Fortresses, stores, stables and workshops."
+    },
+    "arrowParents": [],
+    "checklistParents": [
+      "V14"
+    ],
+    "gameParents": [],
+    "checklistScript": "mission_completed = teu_crusader_conquer_crimea",
+    "effect": "every_owned_province = { limit = { region = crimea_region religion = catholic province_has_current_tech_fort_trigger = yes } add_province_modifier = { name = teux_pass_stores duration = 7300 } }",
+    "conditionText": "Remain Catholic. Own 2 Catholic Crimean provinces with current-tech forts and at least 5 workshop/counting-house provinces nationally.",
+    "rewardText": "Frontier Storehouses: +10% supply limit, -15% local fort maintenance (20 years; qualifying provinces).",
+    "eventIds": [],
+    "claims": []
+  },
+  {
+    "id": "I08",
+    "scriptId": "teux_i08",
+    "title": "Chapter Schools",
+    "lane": 0,
+    "position": 10,
+    "parents": [
+      "V11"
+    ],
+    "trigger": "religion = catholic\nuniversity = 3 theologian = 2",
+    "conditions": "Remain Catholic. Own 3 universities and employ a level-2-or-higher Theologian.",
+    "rewards": [
+      {
+        "script": "add_country_modifier = { name = teux_chapter_schools duration = 7300 }",
+        "text": "Chapter Schools: -5% idea cost (20 years)."
+      },
+      {
+        "script": "change_government_reform_progress = 30",
+        "text": "+30 government reform progress."
+      }
+    ],
+    "why": "A late internal side step beside cathedral construction, later feeding the learned-clergy continuation.",
+    "root": "administration",
+    "intermediate": true,
+    "icon": "mission_teux_i08",
+    "source": {
+      "url": "https://deutscher-orden.com/geschichte/",
+      "title": "The Order\u2019s own institutional history",
+      "root": "Commanderies and central administration."
+    },
+    "arrowParents": [],
+    "checklistParents": [
+      "V11"
+    ],
+    "gameParents": [],
+    "checklistScript": "mission_completed = teu_crusader_land_of_churches",
+    "effect": "add_country_modifier = { name = teux_chapter_schools duration = 7300 }\nchange_government_reform_progress = 30",
+    "conditionText": "Remain Catholic. Own 3 universities and employ a level-2-or-higher Theologian.",
+    "rewardText": "Chapter Schools: -5% idea cost (20 years). +30 government reform progress.",
+    "eventIds": [],
+    "claims": []
+  },
+  {
+    "id": "N01",
+    "scriptId": "teux_n01",
+    "title": "Russian Chapters",
+    "lane": 0,
+    "position": 13,
+    "parents": [
+      "V10"
+    ],
+    "trigger": "religion = catholic\nstability = 1 OR = { num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { region = russia_region religion = catholic  value = 20 } calc_true_if = { all_country = { religion = catholic alliance_with = ROOT } amount = 3 } }",
+    "conditions": "Remain Catholic. Have +1 stability and either hold 20 Catholic Russian provinces with subjects or maintain 3 Catholic allies.",
+    "rewards": [
+      {
+        "script": "west_siberia_region = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }",
+        "text": "Permanent claims: West Siberia. Existing cores/claims and uncolonized provinces are excluded.",
+        "claims": [
+          "west_siberia_region"
+        ]
+      },
+      {
+        "script": "country_event = { id = teux.1 }",
+        "text": "Event: The Russian Chapter Council. Choose one outcome; rewards do not stack.",
+        "event": "teux.1"
+      }
+    ],
+    "why": "Preserve the vanilla allied solution to Russia, then open a northern frontier.",
+    "root": "administration",
+    "intermediate": false,
+    "icon": "mission_teux_n01",
+    "source": {
+      "url": "https://deutscher-orden.com/geschichte/",
+      "title": "The Order\u2019s own institutional history",
+      "root": "Commanderies and central administration."
+    },
+    "arrowParents": [],
+    "checklistParents": [
+      "V10"
+    ],
+    "gameParents": [],
+    "checklistScript": "mission_completed = teu_crusader_end_the_schism",
+    "effect": "west_siberia_region = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\ncountry_event = { id = teux.1 }",
+    "conditionText": "Remain Catholic. Have +1 stability and either hold 20 Catholic Russian provinces with subjects or maintain 3 Catholic allies.",
+    "rewardText": "Permanent claims: West Siberia. Existing cores/claims and uncolonized provinces are excluded. Event: The Russian Chapter Council. Choose one outcome; rewards do not stack.",
+    "eventIds": [
+      "teux.1"
+    ],
+    "claims": [
+      "west_siberia_region"
+    ]
+  },
+  {
+    "id": "N02",
+    "scriptId": "teux_n02",
+    "title": "Siberian Gate",
+    "lane": 0,
+    "position": 15,
+    "parents": [
+      "N01"
+    ],
+    "trigger": "religion = catholic\nnum_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { region = west_siberia_region religion = catholic  value = 8 }",
+    "conditions": "Remain Catholic. Hold 8 Catholic provinces in West Siberia with non-sovereign subjects.",
+    "rewards": [
+      {
+        "script": "add_country_modifier = { name = teux_siberian_stations duration = 9125 }",
+        "text": "Siberian Stations: +1 colonists, +15 yearly settler increase (25 years)."
+      }
+    ],
+    "why": "A foothold earns the means to settle beyond the inhabited frontier.",
+    "root": "vanilla",
+    "intermediate": false,
+    "icon": "mission_teux_n02",
+    "source": {
+      "url": "https://forum.paradoxplaza.com/forum/developer-diary/europa-universalis-iv-development-diary-3rd-of-may-2022.1523186/",
+      "title": "Paradox: Teutonic developer diary, 3 May 2022",
+      "root": "Crusading expansion and cavalry adaptation."
+    },
+    "arrowParents": [
+      "N01"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_n01"
+    ],
+    "checklistScript": "",
+    "effect": "add_country_modifier = { name = teux_siberian_stations duration = 9125 }",
+    "conditionText": "Remain Catholic. Hold 8 Catholic provinces in West Siberia with non-sovereign subjects.",
+    "rewardText": "Siberian Stations: +1 colonists, +15 yearly settler increase (25 years).",
+    "eventIds": [],
+    "claims": []
+  },
+  {
+    "id": "N03",
+    "scriptId": "teux_n03",
+    "title": "Winter Commanderies",
+    "lane": 0,
+    "position": 16,
+    "parents": [
+      "N02"
+    ],
+    "trigger": "religion = catholic\nnum_of_owned_provinces_with = { region = west_siberia_region religion = catholic province_has_current_tech_fort_trigger = yes value = 3 }",
+    "conditions": "Remain Catholic. Directly own 3 Catholic West Siberian provinces with current-tech forts.",
+    "rewards": [
+      {
+        "script": "east_siberia_region = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }",
+        "text": "Permanent claims: East Siberia. Existing cores/claims and uncolonized provinces are excluded.",
+        "claims": [
+          "east_siberia_region"
+        ]
+      },
+      {
+        "script": "every_owned_province = { limit = { region = west_siberia_region religion = catholic province_has_current_tech_fort_trigger = yes } add_province_modifier = { name = teux_winter_forts duration = 9125 } }",
+        "text": "Winter Stores: -25% local fort maintenance (25 years; qualifying provinces)."
+      }
+    ],
+    "why": "The frontier advances only after its supply forts exist. The local discount is applied to eligible northern forts.",
+    "root": "logistics",
+    "intermediate": false,
+    "icon": "mission_teux_n03",
+    "source": {
+      "url": "https://zamek.malbork.pl/en/museum/history-of-the-museum/",
+      "title": "Malbork Castle Museum",
+      "root": "Fortresses, stores, stables and workshops."
+    },
+    "arrowParents": [
+      "N02"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_n02"
+    ],
+    "checklistScript": "",
+    "effect": "east_siberia_region = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nevery_owned_province = { limit = { region = west_siberia_region religion = catholic province_has_current_tech_fort_trigger = yes } add_province_modifier = { name = teux_winter_forts duration = 9125 } }",
+    "conditionText": "Remain Catholic. Directly own 3 Catholic West Siberian provinces with current-tech forts.",
+    "rewardText": "Permanent claims: East Siberia. Existing cores/claims and uncolonized provinces are excluded. Winter Stores: -25% local fort maintenance (25 years; qualifying provinces).",
+    "eventIds": [],
+    "claims": [
+      "east_siberia_region"
+    ]
+  },
+  {
+    "id": "N04",
+    "scriptId": "teux_n04",
+    "title": "Northern Missions",
+    "lane": 1,
+    "position": 16,
+    "parents": [
+      "N02"
+    ],
+    "trigger": "religion = catholic\nnum_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { region = west_siberia_region religion = catholic  value = 12 } num_of_owned_provinces_with = { region = west_siberia_region religion = catholic has_tax_building_trigger = yes value = 4 }",
+    "conditions": "Remain Catholic. Hold 12 Catholic West Siberian provinces, with churches/cathedrals in 4 directly owned ones.",
+    "rewards": [
+      {
+        "script": "remove_country_modifier = teux_siberian_stations",
+        "text": "Replace Siberian Stations; the colonists do not stack."
+      },
+      {
+        "script": "add_country_modifier = { name = teux_northern_missions duration = 12775 }",
+        "text": "Northern Mission Stations: +1 colonists, +20 yearly settler increase (35 years)."
+      },
+      {
+        "script": "add_papal_influence = 30",
+        "text": "+30 papal influence."
+      }
+    ],
+    "why": "Expansion and parish infrastructure improve the same settlement service instead of adding a second colonist.",
+    "root": "hospital",
+    "intermediate": false,
+    "icon": "mission_teux_n04",
+    "source": {
+      "url": "https://www.deutscher-orden.de/wer-wir-sind/erbe-und-auftrag",
+      "title": "The Order: roots and mission",
+      "root": "Hospital origins and pilgrim protection."
+    },
+    "arrowParents": [
+      "N02"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_n02"
+    ],
+    "checklistScript": "",
+    "effect": "remove_country_modifier = teux_siberian_stations\nadd_country_modifier = { name = teux_northern_missions duration = 12775 }\nadd_papal_influence = 30",
+    "conditionText": "Remain Catholic. Hold 12 Catholic West Siberian provinces, with churches/cathedrals in 4 directly owned ones.",
+    "rewardText": "Replace Siberian Stations; the colonists do not stack. Northern Mission Stations: +1 colonists, +20 yearly settler increase (35 years). +30 papal influence.",
+    "eventIds": [],
+    "claims": []
+  },
+  {
+    "id": "N05",
+    "scriptId": "teux_n05",
+    "title": "An Eastern Coast",
+    "lane": 0,
+    "position": 17,
+    "parents": [
+      "N03",
+      "N04"
+    ],
+    "trigger": "religion = catholic\nnum_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { region = east_siberia_region religion = catholic has_port = yes value = 3 }",
+    "conditions": "Remain Catholic. Hold 3 Catholic coastal provinces in East Siberia with subjects.",
+    "rewards": [
+      {
+        "script": "manchuria_region = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }",
+        "text": "Permanent claims: Manchuria. Existing cores/claims and uncolonized provinces are excluded.",
+        "claims": [
+          "manchuria_region"
+        ]
+      },
+      {
+        "script": "add_country_modifier = { name = teux_pacific_pilots duration = 10950 }",
+        "text": "Pacific Pilots: -15% naval attrition (30 years)."
+      }
+    ],
+    "why": "Arrival at the Pacific changes the logistical problem and points toward inhabited Manchuria.",
+    "root": "vanilla",
+    "intermediate": false,
+    "icon": "mission_teux_n05",
+    "source": {
+      "url": "https://forum.paradoxplaza.com/forum/developer-diary/europa-universalis-iv-development-diary-3rd-of-may-2022.1523186/",
+      "title": "Paradox: Teutonic developer diary, 3 May 2022",
+      "root": "Crusading expansion and cavalry adaptation."
+    },
+    "arrowParents": [
+      "N03",
+      "N04"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_n03",
+      "teux_n04"
+    ],
+    "checklistScript": "",
+    "effect": "manchuria_region = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nadd_country_modifier = { name = teux_pacific_pilots duration = 10950 }",
+    "conditionText": "Remain Catholic. Hold 3 Catholic coastal provinces in East Siberia with subjects.",
+    "rewardText": "Permanent claims: Manchuria. Existing cores/claims and uncolonized provinces are excluded. Pacific Pilots: -15% naval attrition (30 years).",
+    "eventIds": [],
+    "claims": [
+      "manchuria_region"
+    ]
+  },
+  {
+    "id": "N06",
+    "scriptId": "teux_n06",
+    "title": "Amur Commanderies",
+    "lane": 0,
+    "position": 19,
+    "parents": [
+      "N05"
+    ],
+    "trigger": "religion = catholic\nnum_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { region = manchuria_region religion = catholic  value = 10 } num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { region = manchuria_region religion = catholic province_has_current_tech_fort_trigger = yes value = 2 }",
+    "conditions": "Remain Catholic. Hold 10 Catholic Manchurian provinces, including 2 with current-tech forts.",
+    "rewards": [
+      {
+        "script": "hebei_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nshandong_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }",
+        "text": "Permanent claims: Hebei, Shandong. Existing cores/claims and uncolonized provinces are excluded.",
+        "claims": [
+          "hebei_area",
+          "shandong_area"
+        ]
+      },
+      {
+        "script": "every_owned_province = { limit = { region = manchuria_region religion = catholic } add_province_modifier = { name = teux_amur_settlement duration = 9125 } }",
+        "text": "Amur Settlement: -1 local unrest (25 years; qualifying provinces)."
+      }
+    ],
+    "why": "Settle the Amur frontier before meeting the Chinese branch along its northern approaches.",
+    "root": "administration",
+    "intermediate": false,
+    "icon": "mission_teux_n06",
+    "source": {
+      "url": "https://deutscher-orden.com/geschichte/",
+      "title": "The Order\u2019s own institutional history",
+      "root": "Commanderies and central administration."
+    },
+    "arrowParents": [
+      "N05"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_n05"
+    ],
+    "checklistScript": "",
+    "effect": "hebei_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nshandong_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nevery_owned_province = { limit = { region = manchuria_region religion = catholic } add_province_modifier = { name = teux_amur_settlement duration = 9125 } }",
+    "conditionText": "Remain Catholic. Hold 10 Catholic Manchurian provinces, including 2 with current-tech forts.",
+    "rewardText": "Permanent claims: Hebei, Shandong. Existing cores/claims and uncolonized provinces are excluded. Amur Settlement: -1 local unrest (25 years; qualifying provinces).",
+    "eventIds": [],
+    "claims": [
+      "hebei_area",
+      "shandong_area"
+    ]
+  },
+  {
+    "id": "N07",
+    "scriptId": "teux_n07",
+    "title": "The Northern Rule",
+    "lane": 0,
+    "position": 21,
+    "parents": [
+      "N06"
+    ],
+    "trigger": "religion = catholic\nnum_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { OR = { region = manchuria_region region = east_siberia_region } religion = catholic value = 20 } is_at_war = no religious_unity = 0.9 NOT = { overextension_percentage = 25 }",
+    "conditions": "Remain Catholic. Hold 20 Catholic provinces across East Siberia and Manchuria; be at peace, with 90% religious unity and less than 25% overextension.",
+    "rewards": [
+      {
+        "script": "add_country_modifier = { name = teux_northern_rule duration = -1 }",
+        "text": "The Northern Rule: +5% governing capacity (permanent)."
+      }
+    ],
+    "why": "A distant territorial system earns a modest permanent administrative allowance after consolidation.",
+    "root": "administration",
+    "intermediate": false,
+    "icon": "mission_teux_n07",
+    "source": {
+      "url": "https://deutscher-orden.com/geschichte/",
+      "title": "The Order\u2019s own institutional history",
+      "root": "Commanderies and central administration."
+    },
+    "arrowParents": [
+      "N06"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_n06"
+    ],
+    "checklistScript": "",
+    "effect": "add_country_modifier = { name = teux_northern_rule duration = -1 }",
+    "conditionText": "Remain Catholic. Hold 20 Catholic provinces across East Siberia and Manchuria; be at peace, with 90% religious unity and less than 25% overextension.",
+    "rewardText": "The Northern Rule: +5% governing capacity (permanent).",
+    "eventIds": [],
+    "claims": []
+  },
+  {
+    "id": "N08",
+    "scriptId": "teux_n08",
+    "title": "A Northern See",
+    "lane": 0,
+    "position": 23,
+    "parents": [
+      "N07"
+    ],
+    "trigger": "religion = catholic\nnum_of_owned_provinces_with = { region = east_siberia_region religion = catholic has_port = yes has_building = cathedral development = 15 value = 1 }",
+    "conditions": "Remain Catholic. Directly own a Catholic East Siberian port with a cathedral and at least 15 development.",
+    "rewards": [
+      {
+        "script": "random_owned_province = { limit = { region = east_siberia_region religion = catholic has_port = yes has_building = cathedral development = 15 } add_base_manpower = 1 add_province_modifier = { name = teux_northern_see duration = -1 } }",
+        "text": "One qualifying northern port gains +1 manpower development and permanent \u221210% local development cost."
+      }
+    ],
+    "why": "End the northern arm with a lasting local institution rather than another empire-wide combat boost.",
+    "root": "hospital",
+    "intermediate": false,
+    "icon": "mission_teux_n08",
+    "source": {
+      "url": "https://www.deutscher-orden.de/wer-wir-sind/erbe-und-auftrag",
+      "title": "The Order: roots and mission",
+      "root": "Hospital origins and pilgrim protection."
+    },
+    "arrowParents": [
+      "N07"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_n07"
+    ],
+    "checklistScript": "",
+    "effect": "random_owned_province = { limit = { region = east_siberia_region religion = catholic has_port = yes has_building = cathedral development = 15 } add_base_manpower = 1 add_province_modifier = { name = teux_northern_see duration = -1 } }",
+    "conditionText": "Remain Catholic. Directly own a Catholic East Siberian port with a cathedral and at least 15 development.",
+    "rewardText": "One qualifying northern port gains +1 manpower development and permanent \u221210% local development cost.",
+    "eventIds": [],
+    "claims": []
+  },
+  {
+    "id": "E01",
+    "scriptId": "teux_e01",
+    "title": "Beyond the Oxus",
+    "lane": 2,
+    "position": 8,
+    "parents": [
+      "V21"
+    ],
+    "trigger": "religion = catholic\nis_at_war = no stability = 1 NOT = { is_in_deficit = yes }",
+    "conditions": "Remain Catholic. Be at peace with +1 stability and no monthly deficit.",
+    "rewards": [
+      {
+        "script": "khorasan_region = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }",
+        "text": "Permanent claims: Khorasan. Existing cores/claims and uncolonized provinces are excluded.",
+        "claims": [
+          "khorasan_region"
+        ]
+      },
+      {
+        "script": "country_event = { id = teux.2 }",
+        "text": "Event: The Eastern Commission. Choose one outcome; rewards do not stack.",
+        "event": "teux.2"
+      }
+    ],
+    "why": "Begin after the vanilla Holy Horde with a recover-and-plan task that grants the next claims.",
+    "root": "vanilla",
+    "intermediate": false,
+    "icon": "mission_teux_e01",
+    "source": {
+      "url": "https://forum.paradoxplaza.com/forum/developer-diary/europa-universalis-iv-development-diary-3rd-of-may-2022.1523186/",
+      "title": "Paradox: Teutonic developer diary, 3 May 2022",
+      "root": "Crusading expansion and cavalry adaptation."
+    },
+    "arrowParents": [
+      "V21"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teu_crusader_a_holy_horde"
+    ],
+    "checklistScript": "",
+    "effect": "khorasan_region = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\ncountry_event = { id = teux.2 }",
+    "conditionText": "Remain Catholic. Be at peace with +1 stability and no monthly deficit.",
+    "rewardText": "Permanent claims: Khorasan. Existing cores/claims and uncolonized provinces are excluded. Event: The Eastern Commission. Choose one outcome; rewards do not stack.",
+    "eventIds": [
+      "teux.2"
+    ],
+    "claims": [
+      "khorasan_region"
+    ]
+  },
+  {
+    "id": "E02",
+    "scriptId": "teux_e02",
+    "title": "The Khorasan Road",
+    "lane": 3,
+    "position": 9,
+    "parents": [
+      "E01"
+    ],
+    "trigger": "religion = catholic\nnum_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { region = khorasan_region religion = catholic  value = 12 }",
+    "conditions": "Remain Catholic. Hold 12 Catholic Khorasani provinces with subjects.",
+    "rewards": [
+      {
+        "script": "persia_region = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }",
+        "text": "Permanent claims: Persia. Existing cores/claims and uncolonized provinces are excluded.",
+        "claims": [
+          "persia_region"
+        ]
+      },
+      {
+        "script": "add_yearly_manpower = 1",
+        "text": "+1 years of manpower."
+      }
+    ],
+    "why": "Conversion secures the corridor and replenishes the army before Persia.",
+    "root": "vanilla",
+    "intermediate": false,
+    "icon": "mission_teux_e02",
+    "source": {
+      "url": "https://forum.paradoxplaza.com/forum/developer-diary/europa-universalis-iv-development-diary-3rd-of-may-2022.1523186/",
+      "title": "Paradox: Teutonic developer diary, 3 May 2022",
+      "root": "Crusading expansion and cavalry adaptation."
+    },
+    "arrowParents": [
+      "E01"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_e01"
+    ],
+    "checklistScript": "",
+    "effect": "persia_region = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nadd_yearly_manpower = 1",
+    "conditionText": "Remain Catholic. Hold 12 Catholic Khorasani provinces with subjects.",
+    "rewardText": "Permanent claims: Persia. Existing cores/claims and uncolonized provinces are excluded. +1 years of manpower.",
+    "eventIds": [],
+    "claims": [
+      "persia_region"
+    ]
+  },
+  {
+    "id": "E03",
+    "scriptId": "teux_e03",
+    "title": "The Herat Chapter",
+    "lane": 2,
+    "position": 10,
+    "parents": [
+      "E02"
+    ],
+    "trigger": "religion = catholic\nowns_core_province = 446 446 = { religion = catholic has_tax_building_trigger = yes }",
+    "conditions": "Remain Catholic. Directly own and core Catholic Herat (446), with a church or cathedral.",
+    "rewards": [
+      {
+        "script": "446 = { add_base_production = 2 add_devastation = -20 }",
+        "text": "Herat gains +2 production development and loses 20 devastation."
+      },
+      {
+        "script": "add_papal_influence = 20",
+        "text": "+20 papal influence."
+      }
+    ],
+    "why": "An optional city institution rewards rebuilding between large campaigns.",
+    "root": "hospital",
+    "intermediate": false,
+    "icon": "mission_teux_e03",
+    "source": {
+      "url": "https://www.deutscher-orden.de/wer-wir-sind/erbe-und-auftrag",
+      "title": "The Order: roots and mission",
+      "root": "Hospital origins and pilgrim protection."
+    },
+    "arrowParents": [
+      "E02"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_e02"
+    ],
+    "checklistScript": "",
+    "effect": "446 = { add_base_production = 2 add_devastation = -20 }\nadd_papal_influence = 20",
+    "conditionText": "Remain Catholic. Directly own and core Catholic Herat (446), with a church or cathedral.",
+    "rewardText": "Herat gains +2 production development and loses 20 devastation. +20 papal influence.",
+    "eventIds": [],
+    "claims": []
+  },
+  {
+    "id": "E04",
+    "scriptId": "teux_e04",
+    "title": "Persian Commanderies",
+    "lane": 3,
+    "position": 14,
+    "parents": [
+      "E02"
+    ],
+    "trigger": "religion = catholic\nnum_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { region = persia_region religion = catholic  value = 20 }",
+    "conditions": "Remain Catholic. Hold 20 Catholic Persian provinces with subjects.",
+    "rewards": [
+      {
+        "script": "lahore_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nmultan_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }",
+        "text": "Permanent claims: Lahore, Multan. Existing cores/claims and uncolonized provinces are excluded.",
+        "claims": [
+          "lahore_area",
+          "multan_area"
+        ]
+      },
+      {
+        "script": "country_event = { id = teux.3 }",
+        "text": "Event: The Persian Settlement. Choose one outcome; rewards do not stack.",
+        "event": "teux.3"
+      }
+    ],
+    "why": "A court-versus-visitation choice makes conquest produce an administrative question.",
+    "root": "administration",
+    "intermediate": false,
+    "icon": "mission_teux_e04",
+    "source": {
+      "url": "https://deutscher-orden.com/geschichte/",
+      "title": "The Order\u2019s own institutional history",
+      "root": "Commanderies and central administration."
+    },
+    "arrowParents": [
+      "E02"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_e02"
+    ],
+    "checklistScript": "",
+    "effect": "lahore_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nmultan_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\ncountry_event = { id = teux.3 }",
+    "conditionText": "Remain Catholic. Hold 20 Catholic Persian provinces with subjects.",
+    "rewardText": "Permanent claims: Lahore, Multan. Existing cores/claims and uncolonized provinces are excluded. Event: The Persian Settlement. Choose one outcome; rewards do not stack.",
+    "eventIds": [
+      "teux.3"
+    ],
+    "claims": [
+      "lahore_area",
+      "multan_area"
+    ]
+  },
+  {
+    "id": "E05",
+    "scriptId": "teux_e05",
+    "title": "The Indus Gate",
+    "lane": 3,
+    "position": 16,
+    "parents": [
+      "E04"
+    ],
+    "trigger": "religion = catholic\nnum_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { OR = { area = lahore_area area = multan_area } religion = catholic value = 6 } num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { OR = { area = lahore_area area = multan_area } religion = catholic province_has_current_tech_fort_trigger = yes value = 2 }",
+    "conditions": "Remain Catholic. Hold 6 Catholic provinces in Lahore/Multan, including 2 current-tech forts.",
+    "rewards": [
+      {
+        "script": "sirhind_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nupper_doab_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nlower_doab_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }",
+        "text": "Permanent claims: Sirhind, Upper Doab, Lower Doab. Existing cores/claims and uncolonized provinces are excluded.",
+        "claims": [
+          "sirhind_area",
+          "upper_doab_area",
+          "lower_doab_area"
+        ]
+      },
+      {
+        "script": "define_advisor = { type = fortification_expert skill = 3 cost_multiplier = 0.5 religion = ROOT }",
+        "text": "Level-3 Fortification Expert of your religion at 50% normal cost."
+      }
+    ],
+    "why": "Secure a defendable Indus approach before issuing claims toward Delhi.",
+    "root": "logistics",
+    "intermediate": false,
+    "icon": "mission_teux_e05",
+    "source": {
+      "url": "https://zamek.malbork.pl/en/museum/history-of-the-museum/",
+      "title": "Malbork Castle Museum",
+      "root": "Fortresses, stores, stables and workshops."
+    },
+    "arrowParents": [
+      "E04"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_e04"
+    ],
+    "checklistScript": "",
+    "effect": "sirhind_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nupper_doab_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nlower_doab_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\ndefine_advisor = { type = fortification_expert skill = 3 cost_multiplier = 0.5 religion = ROOT }",
+    "conditionText": "Remain Catholic. Hold 6 Catholic provinces in Lahore/Multan, including 2 current-tech forts.",
+    "rewardText": "Permanent claims: Sirhind, Upper Doab, Lower Doab. Existing cores/claims and uncolonized provinces are excluded. Level-3 Fortification Expert of your religion at 50% normal cost.",
+    "eventIds": [],
+    "claims": [
+      "sirhind_area",
+      "upper_doab_area",
+      "lower_doab_area"
+    ]
+  },
+  {
+    "id": "E06",
+    "scriptId": "teux_e06",
+    "title": "A Chapter at Delhi",
+    "lane": 3,
+    "position": 18,
+    "parents": [
+      "E05"
+    ],
+    "trigger": "religion = catholic\nnum_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { region = hindusthan_region religion = catholic  value = 12 } owns_core_province = 522",
+    "conditions": "Remain Catholic. Hold 12 Catholic Hindustani provinces and directly own/core Delhi (522). Delhi itself need not already be Catholic.",
+    "rewards": [
+      {
+        "script": "bengal_region = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }",
+        "text": "Permanent claims: Bengal. Existing cores/claims and uncolonized provinces are excluded.",
+        "claims": [
+          "bengal_region"
+        ]
+      },
+      {
+        "script": "country_event = { id = teux.4 }",
+        "text": "Event: The Delhi Chapter. Choose one outcome; rewards do not stack.",
+        "event": "teux.4"
+      }
+    ],
+    "why": "A major city is an event milestone; the next claims still lead eastward.",
+    "root": "hospital",
+    "intermediate": false,
+    "icon": "mission_teux_e06",
+    "source": {
+      "url": "https://www.deutscher-orden.de/wer-wir-sind/erbe-und-auftrag",
+      "title": "The Order: roots and mission",
+      "root": "Hospital origins and pilgrim protection."
+    },
+    "arrowParents": [
+      "E05"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_e05"
+    ],
+    "checklistScript": "",
+    "effect": "bengal_region = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\ncountry_event = { id = teux.4 }",
+    "conditionText": "Remain Catholic. Hold 12 Catholic Hindustani provinces and directly own/core Delhi (522). Delhi itself need not already be Catholic.",
+    "rewardText": "Permanent claims: Bengal. Existing cores/claims and uncolonized provinces are excluded. Event: The Delhi Chapter. Choose one outcome; rewards do not stack.",
+    "eventIds": [
+      "teux.4"
+    ],
+    "claims": [
+      "bengal_region"
+    ]
+  },
+  {
+    "id": "E07",
+    "scriptId": "teux_e07",
+    "title": "The Ganges Road",
+    "lane": 3,
+    "position": 20,
+    "parents": [
+      "E06"
+    ],
+    "trigger": "religion = catholic\nnum_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { region = bengal_region religion = catholic  value = 15 }",
+    "conditions": "Remain Catholic. Hold 15 Catholic Bengali provinces with subjects.",
+    "rewards": [
+      {
+        "script": "deccan_region = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }",
+        "text": "Permanent claims: Deccan. Existing cores/claims and uncolonized provinces are excluded.",
+        "claims": [
+          "deccan_region"
+        ]
+      },
+      {
+        "script": "add_years_of_owned_provinces_production_income = { years = 2 trigger = { region = bengal_region religion = catholic } }",
+        "text": "Gain 2 years of production income from directly owned Catholic Bengali provinces."
+      }
+    ],
+    "why": "Converted trade settlements finance the southern campaign.",
+    "root": "vanilla",
+    "intermediate": false,
+    "icon": "mission_teux_e07",
+    "source": {
+      "url": "https://forum.paradoxplaza.com/forum/developer-diary/europa-universalis-iv-development-diary-3rd-of-may-2022.1523186/",
+      "title": "Paradox: Teutonic developer diary, 3 May 2022",
+      "root": "Crusading expansion and cavalry adaptation."
+    },
+    "arrowParents": [
+      "E06"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_e06"
+    ],
+    "checklistScript": "",
+    "effect": "deccan_region = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nadd_years_of_owned_provinces_production_income = { years = 2 trigger = { region = bengal_region religion = catholic } }",
+    "conditionText": "Remain Catholic. Hold 15 Catholic Bengali provinces with subjects.",
+    "rewardText": "Permanent claims: Deccan. Existing cores/claims and uncolonized provinces are excluded. Gain 2 years of production income from directly owned Catholic Bengali provinces.",
+    "eventIds": [],
+    "claims": [
+      "deccan_region"
+    ]
+  },
+  {
+    "id": "E08",
+    "scriptId": "teux_e08",
+    "title": "Monsoon Stores",
+    "lane": 4,
+    "position": 21,
+    "parents": [
+      "E07"
+    ],
+    "trigger": "religion = catholic\nnum_of_owned_provinces_with = { region = bengal_region religion = catholic has_port = yes has_production_building_trigger = yes value = 4 } num_of_transport = 10",
+    "conditions": "Remain Catholic. Directly own 4 Catholic Bengali coastal provinces with workshops/counting houses and field 10 transports.",
+    "rewards": [
+      {
+        "script": "add_country_modifier = { name = teux_monsoon_stores duration = 7300 }",
+        "text": "Monsoon Stores: -10% naval attrition (20 years)."
+      },
+      {
+        "script": "create_admiral = { tradition = 40 }",
+        "text": "Recruit an admiral with 40 tradition."
+      }
+    ],
+    "why": "A naval logistics side branch supports the later Indian Ocean objective.",
+    "root": "logistics",
+    "intermediate": false,
+    "icon": "mission_teux_e08",
+    "source": {
+      "url": "https://zamek.malbork.pl/en/museum/history-of-the-museum/",
+      "title": "Malbork Castle Museum",
+      "root": "Fortresses, stores, stables and workshops."
+    },
+    "arrowParents": [
+      "E07"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_e07"
+    ],
+    "checklistScript": "",
+    "effect": "add_country_modifier = { name = teux_monsoon_stores duration = 7300 }\ncreate_admiral = { tradition = 40 }",
+    "conditionText": "Remain Catholic. Directly own 4 Catholic Bengali coastal provinces with workshops/counting houses and field 10 transports.",
+    "rewardText": "Monsoon Stores: -10% naval attrition (20 years). Recruit an admiral with 40 tradition.",
+    "eventIds": [],
+    "claims": []
+  },
+  {
+    "id": "E09",
+    "scriptId": "teux_e09",
+    "title": "Deccan Commanderies",
+    "lane": 3,
+    "position": 21,
+    "parents": [
+      "E07"
+    ],
+    "trigger": "religion = catholic\nnum_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { region = deccan_region religion = catholic  value = 20 } religious_unity = 0.85",
+    "conditions": "Remain Catholic. Hold 20 Catholic Deccan provinces with subjects and reach 85% religious unity.",
+    "rewards": [
+      {
+        "script": "coromandel_region = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }",
+        "text": "Permanent claims: Coromandel. Existing cores/claims and uncolonized provinces are excluded.",
+        "claims": [
+          "coromandel_region"
+        ]
+      },
+      {
+        "script": "add_years_of_owned_provinces_manpower = { years = 2 trigger = { region = deccan_region religion = catholic } }",
+        "text": "Gain 2 years of manpower from directly owned Catholic Deccan provinces."
+      }
+    ],
+    "why": "Southern consolidation gives resources and the final Indian coastal claims.",
+    "root": "vanilla",
+    "intermediate": false,
+    "icon": "mission_teux_e09",
+    "source": {
+      "url": "https://forum.paradoxplaza.com/forum/developer-diary/europa-universalis-iv-development-diary-3rd-of-may-2022.1523186/",
+      "title": "Paradox: Teutonic developer diary, 3 May 2022",
+      "root": "Crusading expansion and cavalry adaptation."
+    },
+    "arrowParents": [
+      "E07"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_e07"
+    ],
+    "checklistScript": "",
+    "effect": "coromandel_region = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nadd_years_of_owned_provinces_manpower = { years = 2 trigger = { region = deccan_region religion = catholic } }",
+    "conditionText": "Remain Catholic. Hold 20 Catholic Deccan provinces with subjects and reach 85% religious unity.",
+    "rewardText": "Permanent claims: Coromandel. Existing cores/claims and uncolonized provinces are excluded. Gain 2 years of manpower from directly owned Catholic Deccan provinces.",
+    "eventIds": [],
+    "claims": [
+      "coromandel_region"
+    ]
+  },
+  {
+    "id": "E10",
+    "scriptId": "teux_e10",
+    "title": "An Oceanic Order",
+    "lane": 3,
+    "position": 22,
+    "parents": [
+      "E09",
+      "E08"
+    ],
+    "trigger": "religion = catholic\nnum_of_owned_provinces_with = { superregion = india_superregion religion = catholic has_port = yes value = 25 } num_of_light_ship = 20 num_of_transport = 20 is_at_war = no",
+    "conditions": "Remain Catholic. At peace, directly own 25 Catholic Indian ports and field 20 light ships plus 20 transports.",
+    "rewards": [
+      {
+        "script": "add_country_modifier = { name = teux_oceanic_order duration = 9125 }",
+        "text": "Oceanic Order: +10% naval force limit, +5% trade efficiency (25 years)."
+      }
+    ],
+    "why": "The horse-based state must build a real maritime system to connect its overseas-facing possessions.",
+    "root": "logistics",
+    "intermediate": false,
+    "icon": "mission_teux_e10",
+    "source": {
+      "url": "https://zamek.malbork.pl/en/museum/history-of-the-museum/",
+      "title": "Malbork Castle Museum",
+      "root": "Fortresses, stores, stables and workshops."
+    },
+    "arrowParents": [
+      "E09",
+      "E08"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_e09",
+      "teux_e08"
+    ],
+    "checklistScript": "",
+    "effect": "add_country_modifier = { name = teux_oceanic_order duration = 9125 }",
+    "conditionText": "Remain Catholic. At peace, directly own 25 Catholic Indian ports and field 20 light ships plus 20 transports.",
+    "rewardText": "Oceanic Order: +10% naval force limit, +5% trade efficiency (25 years).",
+    "eventIds": [],
+    "claims": []
+  },
+  {
+    "id": "E11",
+    "scriptId": "teux_e11",
+    "title": "Beyond the Ports",
+    "lane": 3,
+    "position": 24,
+    "parents": [
+      "E10"
+    ],
+    "trigger": "religion = catholic\nnum_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { superregion = india_superregion religion = catholic value = 40 } num_of_owned_provinces_with = { superregion = india_superregion religion = catholic has_manufactory_trigger = yes has_trade_building_trigger = yes value = 10 }",
+    "conditions": "Remain Catholic. Hold 40 Catholic Indian provinces, including 10 directly owned provinces with a manufactory and marketplace/trade depot/stock exchange.",
+    "rewards": [
+      {
+        "script": "add_treasury = 600",
+        "text": "+600 ducats."
+      },
+      {
+        "script": "add_mercantilism = 2",
+        "text": "+2 mercantilism."
+      }
+    ],
+    "why": "Industrial and commercial investment gives the coastal system a productive hinterland.",
+    "root": "administration",
+    "intermediate": false,
+    "icon": "mission_teux_e11",
+    "source": {
+      "url": "https://deutscher-orden.com/geschichte/",
+      "title": "The Order\u2019s own institutional history",
+      "root": "Commanderies and central administration."
+    },
+    "arrowParents": [
+      "E10"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_e10"
+    ],
+    "checklistScript": "",
+    "effect": "add_treasury = 600\nadd_mercantilism = 2",
+    "conditionText": "Remain Catholic. Hold 40 Catholic Indian provinces, including 10 directly owned provinces with a manufactory and marketplace/trade depot/stock exchange.",
+    "rewardText": "+600 ducats. +2 mercantilism.",
+    "eventIds": [],
+    "claims": []
+  },
+  {
+    "id": "E12",
+    "scriptId": "teux_e12",
+    "title": "A Second Centre",
+    "lane": 3,
+    "position": 26,
+    "parents": [
+      "E11"
+    ],
+    "trigger": "religion = catholic\nnum_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { superregion = india_superregion religion = catholic value = 60 } religious_unity = 0.9 stability = 2 NOT = { num_of_loans = 1 }",
+    "conditions": "Remain Catholic. Hold 60 Catholic Indian provinces, have 90% religious unity, +2 stability and no loans.",
+    "rewards": [
+      {
+        "script": "country_event = { id = teux.5 }",
+        "text": "Event: A Second Centre of the Order. Choose one outcome; rewards do not stack.",
+        "event": "teux.5"
+      }
+    ],
+    "why": "A mature eastern realm earns one lasting administrative identity, not a bundle of every bonus.",
+    "root": "administration",
+    "intermediate": false,
+    "icon": "mission_teux_e12",
+    "source": {
+      "url": "https://deutscher-orden.com/geschichte/",
+      "title": "The Order\u2019s own institutional history",
+      "root": "Commanderies and central administration."
+    },
+    "arrowParents": [
+      "E11"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_e11"
+    ],
+    "checklistScript": "",
+    "effect": "country_event = { id = teux.5 }",
+    "conditionText": "Remain Catholic. Hold 60 Catholic Indian provinces, have 90% religious unity, +2 stability and no loans.",
+    "rewardText": "Event: A Second Centre of the Order. Choose one outcome; rewards do not stack.",
+    "eventIds": [
+      "teux.5"
+    ],
+    "claims": []
+  },
+  {
+    "id": "M01",
+    "scriptId": "teux_m01",
+    "title": "Remount Commissions",
+    "lane": 3,
+    "position": 8,
+    "parents": [
+      "V21"
+    ],
+    "trigger": "religion = catholic\ngrain = 30 num_of_cavalry = 60 num_of_owned_provinces_with = {  OR = { has_building = barracks has_building = training_fields } value = 10 }",
+    "conditions": "Remain Catholic. Own 30 grain provinces, 10 barracks/training-field provinces, and field 60 cavalry regiments.",
+    "rewards": [
+      {
+        "script": "zungaria_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\naltai_sayan_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nouter_mongolia_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }",
+        "text": "Permanent claims: Zungaria, Altai Sayan, Outer Mongolia. Existing cores/claims and uncolonized provinces are excluded.",
+        "claims": [
+          "zungaria_area",
+          "altai_sayan_area",
+          "outer_mongolia_area"
+        ]
+      },
+      {
+        "script": "add_country_modifier = { name = teux_remount_commissions duration = 7300 }",
+        "text": "Remount Commissions: -10% cavalry cost (20 years)."
+      }
+    ],
+    "why": "The Holy Horde\u2019s first new military task is a supply commitment, opening Mongolia rather than granting free combat supremacy.",
+    "root": "logistics",
+    "intermediate": false,
+    "icon": "mission_teux_m01",
+    "source": {
+      "url": "https://zamek.malbork.pl/en/museum/history-of-the-museum/",
+      "title": "Malbork Castle Museum",
+      "root": "Fortresses, stores, stables and workshops."
+    },
+    "arrowParents": [
+      "V21"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teu_crusader_a_holy_horde"
+    ],
+    "checklistScript": "",
+    "effect": "zungaria_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\naltai_sayan_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nouter_mongolia_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nadd_country_modifier = { name = teux_remount_commissions duration = 7300 }",
+    "conditionText": "Remain Catholic. Own 30 grain provinces, 10 barracks/training-field provinces, and field 60 cavalry regiments.",
+    "rewardText": "Permanent claims: Zungaria, Altai Sayan, Outer Mongolia. Existing cores/claims and uncolonized provinces are excluded. Remount Commissions: -10% cavalry cost (20 years).",
+    "eventIds": [],
+    "claims": [
+      "zungaria_area",
+      "altai_sayan_area",
+      "outer_mongolia_area"
+    ]
+  },
+  {
+    "id": "M02",
+    "scriptId": "teux_m02",
+    "title": "Break the Ordu",
+    "lane": 4,
+    "position": 9,
+    "parents": [
+      "M01"
+    ],
+    "trigger": "religion = catholic\nnum_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { region = mongolia_region religion = catholic  value = 10 } has_leader_with = { shock = 3 }",
+    "conditions": "Remain Catholic. Hold 10 Catholic Mongolian provinces and have a leader with at least 3 shock pips.",
+    "rewards": [
+      {
+        "script": "mongolia_region = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }",
+        "text": "Permanent claims: Mongolia. Existing cores/claims and uncolonized provinces are excluded.",
+        "claims": [
+          "mongolia_region"
+        ]
+      },
+      {
+        "script": "if = { limit = { has_dlc = \"Cradle of Civilization\" } add_army_professionalism = 0.05 } else = { add_army_tradition = 10 }",
+        "text": "+5 percentage points professionalism with Cradle of Civilization; otherwise +10 army tradition."
+      }
+    ],
+    "why": "Use a limited eastern bridgehead and effective command to earn claims on the wider steppe.",
+    "root": "vanilla",
+    "intermediate": false,
+    "icon": "mission_teux_m02",
+    "source": {
+      "url": "https://forum.paradoxplaza.com/forum/developer-diary/europa-universalis-iv-development-diary-3rd-of-may-2022.1523186/",
+      "title": "Paradox: Teutonic developer diary, 3 May 2022",
+      "root": "Crusading expansion and cavalry adaptation."
+    },
+    "arrowParents": [
+      "M01"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_m01"
+    ],
+    "checklistScript": "",
+    "effect": "mongolia_region = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nif = { limit = { has_dlc = \"Cradle of Civilization\" } add_army_professionalism = 0.05 } else = { add_army_tradition = 10 }",
+    "conditionText": "Remain Catholic. Hold 10 Catholic Mongolian provinces and have a leader with at least 3 shock pips.",
+    "rewardText": "Permanent claims: Mongolia. Existing cores/claims and uncolonized provinces are excluded. +5 percentage points professionalism with Cradle of Civilization; otherwise +10 army tradition.",
+    "eventIds": [],
+    "claims": [
+      "mongolia_region"
+    ]
+  },
+  {
+    "id": "M03",
+    "scriptId": "teux_m03",
+    "title": "The Steppe Council",
+    "lane": 4,
+    "position": 11,
+    "parents": [
+      "M02"
+    ],
+    "trigger": "religion = catholic\nnum_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { region = mongolia_region religion = catholic  value = 20 } stability = 1 NOT = { has_spawned_rebels = nationalist_rebels }",
+    "conditions": "Remain Catholic. Hold 20 Catholic Mongolian provinces, have +1 stability and no active separatist rebel armies.",
+    "rewards": [
+      {
+        "script": "country_event = { id = teux.6 }",
+        "text": "Event: The Steppe Council. Choose one outcome; rewards do not stack.",
+        "event": "teux.6"
+      }
+    ],
+    "why": "Two temporary doctrines answer the same military problem differently.",
+    "root": "vanilla",
+    "intermediate": false,
+    "icon": "mission_teux_m03",
+    "source": {
+      "url": "https://forum.paradoxplaza.com/forum/developer-diary/europa-universalis-iv-development-diary-3rd-of-may-2022.1523186/",
+      "title": "Paradox: Teutonic developer diary, 3 May 2022",
+      "root": "Crusading expansion and cavalry adaptation."
+    },
+    "arrowParents": [
+      "M02"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_m02"
+    ],
+    "checklistScript": "",
+    "effect": "country_event = { id = teux.6 }",
+    "conditionText": "Remain Catholic. Hold 20 Catholic Mongolian provinces, have +1 stability and no active separatist rebel armies.",
+    "rewardText": "Event: The Steppe Council. Choose one outcome; rewards do not stack.",
+    "eventIds": [
+      "teux.6"
+    ],
+    "claims": []
+  },
+  {
+    "id": "M04",
+    "scriptId": "teux_m04",
+    "title": "The Wall Road",
+    "lane": 4,
+    "position": 13,
+    "parents": [
+      "M03"
+    ],
+    "trigger": "religion = catholic\nnum_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { region = mongolia_region religion = catholic province_has_current_tech_fort_trigger = yes value = 6 } num_of_artillery = 20",
+    "conditions": "Remain Catholic. Hold 6 Catholic Mongolian provinces with current-tech forts and field 20 artillery regiments.",
+    "rewards": [
+      {
+        "script": "shanxi_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nshaanxi_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nhebei_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }",
+        "text": "Permanent claims: Shanxi, Shaanxi, Hebei. Existing cores/claims and uncolonized provinces are excluded.",
+        "claims": [
+          "shanxi_area",
+          "shaanxi_area",
+          "hebei_area"
+        ]
+      },
+      {
+        "script": "define_advisor = { type = commandant skill = 3 cost_multiplier = 0.5 religion = ROOT }",
+        "text": "Level-3 Commandant of your religion at 50% normal cost."
+      }
+    ],
+    "why": "China requires siege infrastructure and artillery as well as cavalry.",
+    "root": "logistics",
+    "intermediate": false,
+    "icon": "mission_teux_m04",
+    "source": {
+      "url": "https://zamek.malbork.pl/en/museum/history-of-the-museum/",
+      "title": "Malbork Castle Museum",
+      "root": "Fortresses, stores, stables and workshops."
+    },
+    "arrowParents": [
+      "M03"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_m03"
+    ],
+    "checklistScript": "",
+    "effect": "shanxi_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nshaanxi_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nhebei_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\ndefine_advisor = { type = commandant skill = 3 cost_multiplier = 0.5 religion = ROOT }",
+    "conditionText": "Remain Catholic. Hold 6 Catholic Mongolian provinces with current-tech forts and field 20 artillery regiments.",
+    "rewardText": "Permanent claims: Shanxi, Shaanxi, Hebei. Existing cores/claims and uncolonized provinces are excluded. Level-3 Commandant of your religion at 50% normal cost.",
+    "eventIds": [],
+    "claims": [
+      "shanxi_area",
+      "shaanxi_area",
+      "hebei_area"
+    ]
+  },
+  {
+    "id": "M05",
+    "scriptId": "teux_m05",
+    "title": "Northern Capitals",
+    "lane": 4,
+    "position": 15,
+    "parents": [
+      "M04"
+    ],
+    "trigger": "religion = catholic\nnum_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { region = north_china_region religion = catholic  value = 15 } owns_core_province = 1816",
+    "conditions": "Remain Catholic. Hold 15 Catholic North Chinese provinces and directly own/core Beijing (1816).",
+    "rewards": [
+      {
+        "script": "north_china_region = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }",
+        "text": "Permanent claims: North China. Existing cores/claims and uncolonized provinces are excluded.",
+        "claims": [
+          "north_china_region"
+        ]
+      },
+      {
+        "script": "country_event = { id = teux.7 }",
+        "text": "Event: The Northern Capital. Choose one outcome; rewards do not stack.",
+        "event": "teux.7"
+      }
+    ],
+    "why": "The city event changes its lasting role without giving a universal army bonus.",
+    "root": "administration",
+    "intermediate": false,
+    "icon": "mission_teux_m05",
+    "source": {
+      "url": "https://deutscher-orden.com/geschichte/",
+      "title": "The Order\u2019s own institutional history",
+      "root": "Commanderies and central administration."
+    },
+    "arrowParents": [
+      "M04"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_m04"
+    ],
+    "checklistScript": "",
+    "effect": "north_china_region = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\ncountry_event = { id = teux.7 }",
+    "conditionText": "Remain Catholic. Hold 15 Catholic North Chinese provinces and directly own/core Beijing (1816).",
+    "rewardText": "Permanent claims: North China. Existing cores/claims and uncolonized provinces are excluded. Event: The Northern Capital. Choose one outcome; rewards do not stack.",
+    "eventIds": [
+      "teux.7"
+    ],
+    "claims": [
+      "north_china_region"
+    ]
+  },
+  {
+    "id": "M06",
+    "scriptId": "teux_m06",
+    "title": "River Commanderies",
+    "lane": 4,
+    "position": 17,
+    "parents": [
+      "M05"
+    ],
+    "trigger": "religion = catholic\nnum_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { region = north_china_region religion = catholic  value = 25 } num_of_owned_provinces_with = { region = north_china_region religion = catholic has_production_building_trigger = yes value = 6 }",
+    "conditions": "Remain Catholic. Hold 25 Catholic North Chinese provinces; directly own 6 Catholic provinces there with workshops/counting houses.",
+    "rewards": [
+      {
+        "script": "south_china_region = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }",
+        "text": "Permanent claims: South China. Existing cores/claims and uncolonized provinces are excluded.",
+        "claims": [
+          "south_china_region"
+        ]
+      },
+      {
+        "script": "change_government_reform_progress = 50",
+        "text": "+50 government reform progress."
+      }
+    ],
+    "why": "Productive settlement in the north justifies the next southern commission.",
+    "root": "administration",
+    "intermediate": false,
+    "icon": "mission_teux_m06",
+    "source": {
+      "url": "https://deutscher-orden.com/geschichte/",
+      "title": "The Order\u2019s own institutional history",
+      "root": "Commanderies and central administration."
+    },
+    "arrowParents": [
+      "M05"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_m05"
+    ],
+    "checklistScript": "",
+    "effect": "south_china_region = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nchange_government_reform_progress = 50",
+    "conditionText": "Remain Catholic. Hold 25 Catholic North Chinese provinces; directly own 6 Catholic provinces there with workshops/counting houses.",
+    "rewardText": "Permanent claims: South China. Existing cores/claims and uncolonized provinces are excluded. +50 government reform progress.",
+    "eventIds": [],
+    "claims": [
+      "south_china_region"
+    ]
+  },
+  {
+    "id": "M07",
+    "scriptId": "teux_m07",
+    "title": "A Southern Chapter",
+    "lane": 4,
+    "position": 19,
+    "parents": [
+      "M06"
+    ],
+    "trigger": "religion = catholic\nnum_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { region = south_china_region religion = catholic  value = 25 } num_of_owned_provinces_with = { region = south_china_region religion = catholic has_tax_building_trigger = yes value = 8 }",
+    "conditions": "Remain Catholic. Hold 25 Catholic South Chinese provinces and directly own 8 church/cathedral provinces of that faith there.",
+    "rewards": [
+      {
+        "script": "add_years_of_owned_provinces_production_income = { years = 2 trigger = { region = south_china_region religion = catholic } }",
+        "text": "Gain 2 years of production income from directly owned Catholic South Chinese provinces."
+      },
+      {
+        "script": "add_papal_influence = 25",
+        "text": "+25 papal influence."
+      }
+    ],
+    "why": "The inland campaign becomes an institutional network before it can certify a new military doctrine.",
+    "root": "administration",
+    "intermediate": false,
+    "icon": "mission_teux_m07",
+    "source": {
+      "url": "https://deutscher-orden.com/geschichte/",
+      "title": "The Order\u2019s own institutional history",
+      "root": "Commanderies and central administration."
+    },
+    "arrowParents": [
+      "M06"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_m06"
+    ],
+    "checklistScript": "",
+    "effect": "add_years_of_owned_provinces_production_income = { years = 2 trigger = { region = south_china_region religion = catholic } }\nadd_papal_influence = 25",
+    "conditionText": "Remain Catholic. Hold 25 Catholic South Chinese provinces and directly own 8 church/cathedral provinces of that faith there.",
+    "rewardText": "Gain 2 years of production income from directly owned Catholic South Chinese provinces. +25 papal influence.",
+    "eventIds": [],
+    "claims": []
+  },
+  {
+    "id": "M08",
+    "scriptId": "teux_m08",
+    "title": "The Eastern Marshal",
+    "lane": 4,
+    "position": 20,
+    "parents": [
+      "M07",
+      "M03"
+    ],
+    "trigger": "religion = catholic\nreligious_unity = 0.9 num_of_generals = 4 army_size = 120 num_of_cavalry = 60 if = { limit = { has_dlc = \"Cradle of Civilization\" } army_professionalism = 0.6 } else = { army_tradition = 70 }",
+    "conditions": "Remain Catholic. Have 90% religious unity, 4 generals, 120 regiments including 60 cavalry, and 60% professionalism (or 70 army tradition without Cradle of Civilization).",
+    "rewards": [
+      {
+        "script": "country_event = { id = teux.8 }",
+        "text": "Event: The Eastern Marshal. Choose one outcome; rewards do not stack.",
+        "event": "teux.8"
+      }
+    ],
+    "why": "Upgrade the vanilla replacement ladder once: either +5 percentage points cavalry ability, +5% artillery ability, or \u221210% land attrition beyond stage IV.",
+    "root": "vanilla",
+    "intermediate": false,
+    "icon": "mission_teux_m08",
+    "source": {
+      "url": "https://forum.paradoxplaza.com/forum/developer-diary/europa-universalis-iv-development-diary-3rd-of-may-2022.1523186/",
+      "title": "Paradox: Teutonic developer diary, 3 May 2022",
+      "root": "Crusading expansion and cavalry adaptation."
+    },
+    "arrowParents": [
+      "M07"
+    ],
+    "checklistParents": [
+      "M03"
+    ],
+    "gameParents": [
+      "teux_m07"
+    ],
+    "checklistScript": "mission_completed = teux_m03",
+    "effect": "country_event = { id = teux.8 }",
+    "conditionText": "Remain Catholic. Have 90% religious unity, 4 generals, 120 regiments including 60 cavalry, and 60% professionalism (or 70 army tradition without Cradle of Civilization).",
+    "rewardText": "Event: The Eastern Marshal. Choose one outcome; rewards do not stack.",
+    "eventIds": [
+      "teux.8"
+    ],
+    "claims": []
+  },
+  {
+    "id": "S01",
+    "scriptId": "teux_s01",
+    "title": "Southern Mandate",
+    "lane": 2,
+    "position": 13,
+    "parents": [
+      "V16"
+    ],
+    "trigger": "religion = catholic\nis_defender_of_faith = yes stability = 1 army_size_percentage = 0.9",
+    "conditions": "Remain Catholic. Be Defender of the Faith, have +1 stability and field 90% of force limit.",
+    "rewards": [
+      {
+        "script": "anatolia_region = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }",
+        "text": "Permanent claims: Anatolia. Existing cores/claims and uncolonized provinces are excluded.",
+        "claims": [
+          "anatolia_region"
+        ]
+      }
+    ],
+    "why": "A fresh mandate follows the vanilla Ottoman victory and opens a new territorial objective even if the Ottoman tag is gone.",
+    "root": "vanilla",
+    "intermediate": false,
+    "icon": "mission_teux_s01",
+    "source": {
+      "url": "https://forum.paradoxplaza.com/forum/developer-diary/europa-universalis-iv-development-diary-3rd-of-may-2022.1523186/",
+      "title": "Paradox: Teutonic developer diary, 3 May 2022",
+      "root": "Crusading expansion and cavalry adaptation."
+    },
+    "arrowParents": [],
+    "checklistParents": [
+      "V16"
+    ],
+    "gameParents": [],
+    "checklistScript": "mission_completed = teu_crusader_bulwark_against_the_turks",
+    "effect": "anatolia_region = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }",
+    "conditionText": "Remain Catholic. Be Defender of the Faith, have +1 stability and field 90% of force limit.",
+    "rewardText": "Permanent claims: Anatolia. Existing cores/claims and uncolonized provinces are excluded.",
+    "eventIds": [],
+    "claims": [
+      "anatolia_region"
+    ]
+  },
+  {
+    "id": "S02",
+    "scriptId": "teux_s02",
+    "title": "Anatolian Marches",
+    "lane": 2,
+    "position": 15,
+    "parents": [
+      "S01"
+    ],
+    "trigger": "religion = catholic\nnum_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { region = anatolia_region religion = catholic  value = 15 } num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { region = anatolia_region religion = catholic province_has_current_tech_fort_trigger = yes value = 2 }",
+    "conditions": "Remain Catholic. Hold 15 Catholic Anatolian provinces, including 2 current-tech forts.",
+    "rewards": [
+      {
+        "script": "aleppo_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nsyria_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\npalestine_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }",
+        "text": "Permanent claims: Aleppo, Syria, Palestine. Existing cores/claims and uncolonized provinces are excluded.",
+        "claims": [
+          "aleppo_area",
+          "syria_area",
+          "palestine_area"
+        ]
+      },
+      {
+        "script": "change_government_reform_progress = 40",
+        "text": "+40 government reform progress."
+      }
+    ],
+    "why": "Anatolian consolidation supplies the bridge to the Order\u2019s historical Holy Land identity.",
+    "root": "hospital",
+    "intermediate": false,
+    "icon": "mission_teux_s02",
+    "source": {
+      "url": "https://www.deutscher-orden.de/wer-wir-sind/erbe-und-auftrag",
+      "title": "The Order: roots and mission",
+      "root": "Hospital origins and pilgrim protection."
+    },
+    "arrowParents": [
+      "S01"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_s01"
+    ],
+    "checklistScript": "",
+    "effect": "aleppo_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nsyria_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\npalestine_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nchange_government_reform_progress = 40",
+    "conditionText": "Remain Catholic. Hold 15 Catholic Anatolian provinces, including 2 current-tech forts.",
+    "rewardText": "Permanent claims: Aleppo, Syria, Palestine. Existing cores/claims and uncolonized provinces are excluded. +40 government reform progress.",
+    "eventIds": [],
+    "claims": [
+      "aleppo_area",
+      "syria_area",
+      "palestine_area"
+    ]
+  },
+  {
+    "id": "S03",
+    "scriptId": "teux_s03",
+    "title": "The Road to Acre",
+    "lane": 2,
+    "position": 17,
+    "parents": [
+      "S02"
+    ],
+    "trigger": "religion = catholic\nowns_core_province = 1855 num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { region = mashriq_region religion = catholic has_port = yes value = 3 } num_of_transport = 10",
+    "conditions": "Remain Catholic. Directly own/core Sidon (1855, the game\u2019s Acre approach), hold 3 Catholic Mashriqi ports with subjects, and field 10 transports.",
+    "rewards": [
+      {
+        "script": "trans_jordan_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }",
+        "text": "Permanent claims: Trans Jordan. Existing cores/claims and uncolonized provinces are excluded.",
+        "claims": [
+          "trans_jordan_area"
+        ]
+      },
+      {
+        "script": "country_event = { id = teux.9 }",
+        "text": "Event: A House near Acre. Choose one outcome; rewards do not stack.",
+        "event": "teux.9"
+      }
+    ],
+    "why": "Use a coastal logistical foothold, not an unexplained teleport to Jerusalem.",
+    "root": "hospital",
+    "intermediate": false,
+    "icon": "mission_teux_s03",
+    "source": {
+      "url": "https://www.deutscher-orden.de/wer-wir-sind/erbe-und-auftrag",
+      "title": "The Order: roots and mission",
+      "root": "Hospital origins and pilgrim protection."
+    },
+    "arrowParents": [
+      "S02"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_s02"
+    ],
+    "checklistScript": "",
+    "effect": "trans_jordan_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\ncountry_event = { id = teux.9 }",
+    "conditionText": "Remain Catholic. Directly own/core Sidon (1855, the game\u2019s Acre approach), hold 3 Catholic Mashriqi ports with subjects, and field 10 transports.",
+    "rewardText": "Permanent claims: Trans Jordan. Existing cores/claims and uncolonized provinces are excluded. Event: A House near Acre. Choose one outcome; rewards do not stack.",
+    "eventIds": [
+      "teux.9"
+    ],
+    "claims": [
+      "trans_jordan_area"
+    ]
+  },
+  {
+    "id": "S04",
+    "scriptId": "teux_s04",
+    "title": "Jerusalem Restored",
+    "lane": 2,
+    "position": 19,
+    "parents": [
+      "S03"
+    ],
+    "trigger": "religion = catholic\nowns_core_province = 379 379 = { religion = catholic } is_defender_of_faith = yes",
+    "conditions": "Remain Catholic. Directly own/core Catholic Jerusalem (379) and be Defender of the Faith.",
+    "rewards": [
+      {
+        "script": "add_prestige = 25",
+        "text": "+25 prestige."
+      },
+      {
+        "script": "add_papal_influence = 50",
+        "text": "+50 papal influence."
+      },
+      {
+        "script": "country_event = { id = teux.10 }",
+        "text": "Event: The Jerusalem Charter. Choose one outcome; rewards do not stack.",
+        "event": "teux.10"
+      }
+    ],
+    "why": "Jerusalem becomes the start of a new southern responsibility and unlocks optional country-title cosmetics.",
+    "root": "hospital",
+    "intermediate": false,
+    "icon": "mission_teux_s04",
+    "source": {
+      "url": "https://www.deutscher-orden.de/wer-wir-sind/erbe-und-auftrag",
+      "title": "The Order: roots and mission",
+      "root": "Hospital origins and pilgrim protection."
+    },
+    "arrowParents": [
+      "S03"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_s03"
+    ],
+    "checklistScript": "",
+    "effect": "add_prestige = 25\nadd_papal_influence = 50\ncountry_event = { id = teux.10 }",
+    "conditionText": "Remain Catholic. Directly own/core Catholic Jerusalem (379) and be Defender of the Faith.",
+    "rewardText": "+25 prestige. +50 papal influence. Event: The Jerusalem Charter. Choose one outcome; rewards do not stack.",
+    "eventIds": [
+      "teux.10"
+    ],
+    "claims": []
+  },
+  {
+    "id": "S05",
+    "scriptId": "teux_s05",
+    "title": "Pilgrim Roads",
+    "lane": 2,
+    "position": 21,
+    "parents": [
+      "S04"
+    ],
+    "trigger": "religion = catholic\nnum_of_owned_provinces_with = { region = mashriq_region religion = catholic has_tax_building_trigger = yes value = 6 } num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { region = mashriq_region religion = catholic province_has_current_tech_fort_trigger = yes value = 2 }",
+    "conditions": "Remain Catholic. Directly own 6 Catholic Mashriqi provinces with churches/cathedrals; hold 2 current-tech forts in Catholic provinces there.",
+    "rewards": [
+      {
+        "script": "delta_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nbahari_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }",
+        "text": "Permanent claims: Delta, Bahari. Existing cores/claims and uncolonized provinces are excluded.",
+        "claims": [
+          "delta_area",
+          "bahari_area"
+        ]
+      },
+      {
+        "script": "every_owned_province = { limit = { region = mashriq_region religion = catholic } add_province_modifier = { name = teux_pilgrim_roads duration = 7300 } }",
+        "text": "Pilgrim Roads: -1 local unrest (20 years; qualifying provinces)."
+      }
+    ],
+    "why": "Secure and administer the routes before commissioning a Nile campaign.",
+    "root": "hospital",
+    "intermediate": false,
+    "icon": "mission_teux_s05",
+    "source": {
+      "url": "https://www.deutscher-orden.de/wer-wir-sind/erbe-und-auftrag",
+      "title": "The Order: roots and mission",
+      "root": "Hospital origins and pilgrim protection."
+    },
+    "arrowParents": [
+      "S04"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_s04"
+    ],
+    "checklistScript": "",
+    "effect": "delta_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nbahari_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nevery_owned_province = { limit = { region = mashriq_region religion = catholic } add_province_modifier = { name = teux_pilgrim_roads duration = 7300 } }",
+    "conditionText": "Remain Catholic. Directly own 6 Catholic Mashriqi provinces with churches/cathedrals; hold 2 current-tech forts in Catholic provinces there.",
+    "rewardText": "Permanent claims: Delta, Bahari. Existing cores/claims and uncolonized provinces are excluded. Pilgrim Roads: -1 local unrest (20 years; qualifying provinces).",
+    "eventIds": [],
+    "claims": [
+      "delta_area",
+      "bahari_area"
+    ]
+  },
+  {
+    "id": "S06",
+    "scriptId": "teux_s06",
+    "title": "The Nile Gate",
+    "lane": 2,
+    "position": 23,
+    "parents": [
+      "S05"
+    ],
+    "trigger": "religion = catholic\nnum_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { region = egypt_region religion = catholic  value = 8 } owns_core_province = 361",
+    "conditions": "Remain Catholic. Hold 8 Catholic Egyptian provinces and directly own/core Cairo (361).",
+    "rewards": [
+      {
+        "script": "egypt_region = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }",
+        "text": "Permanent claims: Egypt. Existing cores/claims and uncolonized provinces are excluded.",
+        "claims": [
+          "egypt_region"
+        ]
+      },
+      {
+        "script": "define_advisor = { type = treasurer skill = 3 cost_multiplier = 0.25 religion = ROOT }",
+        "text": "Level-3 Treasurer of your religion at 25% normal cost."
+      }
+    ],
+    "why": "A limited Egyptian victory unlocks the wider region and a skilled officer to organize its revenues.",
+    "root": "administration",
+    "intermediate": false,
+    "icon": "mission_teux_s06",
+    "source": {
+      "url": "https://deutscher-orden.com/geschichte/",
+      "title": "The Order\u2019s own institutional history",
+      "root": "Commanderies and central administration."
+    },
+    "arrowParents": [
+      "S05"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_s05"
+    ],
+    "checklistScript": "",
+    "effect": "egypt_region = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\ndefine_advisor = { type = treasurer skill = 3 cost_multiplier = 0.25 religion = ROOT }",
+    "conditionText": "Remain Catholic. Hold 8 Catholic Egyptian provinces and directly own/core Cairo (361).",
+    "rewardText": "Permanent claims: Egypt. Existing cores/claims and uncolonized provinces are excluded. Level-3 Treasurer of your religion at 25% normal cost.",
+    "eventIds": [],
+    "claims": [
+      "egypt_region"
+    ]
+  },
+  {
+    "id": "S07",
+    "scriptId": "teux_s07",
+    "title": "Nile Hospitals",
+    "lane": 2,
+    "position": 25,
+    "parents": [
+      "S06"
+    ],
+    "trigger": "religion = catholic\nnum_of_owned_provinces_with = { region = egypt_region religion = catholic has_tax_building_trigger = yes has_production_building_trigger = yes value = 8 }",
+    "conditions": "Remain Catholic. Directly own 8 Catholic Egyptian provinces with a church/cathedral and workshop/counting house.",
+    "rewards": [
+      {
+        "script": "add_country_modifier = { name = teux_nile_hospitals duration = 7300 }",
+        "text": "Nile Hospitals: -0.02 monthly war exhaustion (20 years)."
+      },
+      {
+        "script": "361 = { add_base_manpower = 2 }",
+        "text": "Cairo gains +2 manpower development."
+      }
+    ],
+    "why": "Hospital foundations require an economic base rather than merely conquered land.",
+    "root": "hospital",
+    "intermediate": false,
+    "icon": "mission_teux_s07",
+    "source": {
+      "url": "https://www.deutscher-orden.de/wer-wir-sind/erbe-und-auftrag",
+      "title": "The Order: roots and mission",
+      "root": "Hospital origins and pilgrim protection."
+    },
+    "arrowParents": [
+      "S06"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_s06"
+    ],
+    "checklistScript": "",
+    "effect": "add_country_modifier = { name = teux_nile_hospitals duration = 7300 }\n361 = { add_base_manpower = 2 }",
+    "conditionText": "Remain Catholic. Directly own 8 Catholic Egyptian provinces with a church/cathedral and workshop/counting house.",
+    "rewardText": "Nile Hospitals: -0.02 monthly war exhaustion (20 years). Cairo gains +2 manpower development.",
+    "eventIds": [],
+    "claims": []
+  },
+  {
+    "id": "S08",
+    "scriptId": "teux_s08",
+    "title": "Red Sea Watch",
+    "lane": 2,
+    "position": 27,
+    "parents": [
+      "S07"
+    ],
+    "trigger": "religion = catholic\nnum_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { region = egypt_region religion = catholic has_port = yes value = 3 } num_of_galley = 10 navy_tradition = 20",
+    "conditions": "Remain Catholic. Hold 3 Catholic Egyptian ports; field 10 galleys and reach 20 naval tradition.",
+    "rewards": [
+      {
+        "script": "tabuk_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nmedina_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nmecca_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }",
+        "text": "Permanent claims: Tabuk, Medina, Mecca. Existing cores/claims and uncolonized provinces are excluded.",
+        "claims": [
+          "tabuk_area",
+          "medina_area",
+          "mecca_area"
+        ]
+      },
+      {
+        "script": "add_country_modifier = { name = teux_red_sea_watch duration = 7300 }",
+        "text": "Red Sea Watch: -10% galley cost (20 years)."
+      },
+      {
+        "script": "create_admiral = { tradition = 40 }",
+        "text": "Recruit an admiral with 40 tradition."
+      }
+    ],
+    "why": "The next commission follows actual naval investment, keeping the southern campaign distinct from cavalry warfare.",
+    "root": "logistics",
+    "intermediate": false,
+    "icon": "mission_teux_s08",
+    "source": {
+      "url": "https://zamek.malbork.pl/en/museum/history-of-the-museum/",
+      "title": "Malbork Castle Museum",
+      "root": "Fortresses, stores, stables and workshops."
+    },
+    "arrowParents": [
+      "S07"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_s07"
+    ],
+    "checklistScript": "",
+    "effect": "tabuk_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nmedina_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nmecca_area = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\nadd_country_modifier = { name = teux_red_sea_watch duration = 7300 }\ncreate_admiral = { tradition = 40 }",
+    "conditionText": "Remain Catholic. Hold 3 Catholic Egyptian ports; field 10 galleys and reach 20 naval tradition.",
+    "rewardText": "Permanent claims: Tabuk, Medina, Mecca. Existing cores/claims and uncolonized provinces are excluded. Red Sea Watch: -10% galley cost (20 years). Recruit an admiral with 40 tradition.",
+    "eventIds": [],
+    "claims": [
+      "tabuk_area",
+      "medina_area",
+      "mecca_area"
+    ]
+  },
+  {
+    "id": "S09",
+    "scriptId": "teux_s09",
+    "title": "Arabian Concord",
+    "lane": 2,
+    "position": 29,
+    "parents": [
+      "S08"
+    ],
+    "trigger": "religion = catholic\nnum_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { region = arabia_region  value = 8 } num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { region = arabia_region religion = catholic  value = 3 } religious_unity = 0.85",
+    "conditions": "Remain Catholic. Hold 8 Arabian provinces, at least 3 Catholic, and maintain 85% religious unity.",
+    "rewards": [
+      {
+        "script": "arabia_region = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }",
+        "text": "Permanent claims: Arabia. Existing cores/claims and uncolonized provinces are excluded.",
+        "claims": [
+          "arabia_region"
+        ]
+      },
+      {
+        "script": "country_event = { id = teux.11 }",
+        "text": "Event: The Arabian Concord. Choose one outcome; rewards do not stack.",
+        "event": "teux.11"
+      }
+    ],
+    "why": "A mixed frontier settlement precedes broader claims; this is a speculative continuation, not an asserted historical Arabian conquest plan.",
+    "root": "administration",
+    "intermediate": false,
+    "icon": "mission_teux_s09",
+    "source": {
+      "url": "https://deutscher-orden.com/geschichte/",
+      "title": "The Order\u2019s own institutional history",
+      "root": "Commanderies and central administration."
+    },
+    "arrowParents": [
+      "S08"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_s08"
+    ],
+    "checklistScript": "",
+    "effect": "arabia_region = { limit = { is_empty = no NOT = { is_core = ROOT } NOT = { is_permanent_claim = ROOT } } add_permanent_claim = ROOT }\ncountry_event = { id = teux.11 }",
+    "conditionText": "Remain Catholic. Hold 8 Arabian provinces, at least 3 Catholic, and maintain 85% religious unity.",
+    "rewardText": "Permanent claims: Arabia. Existing cores/claims and uncolonized provinces are excluded. Event: The Arabian Concord. Choose one outcome; rewards do not stack.",
+    "eventIds": [
+      "teux.11"
+    ],
+    "claims": [
+      "arabia_region"
+    ]
+  },
+  {
+    "id": "S10",
+    "scriptId": "teux_s10",
+    "title": "Two Seas",
+    "lane": 2,
+    "position": 31,
+    "parents": [
+      "S09"
+    ],
+    "trigger": "religion = catholic\nnum_of_owned_provinces_with = { area = palestine_area has_port = yes religion = catholic value = 2 } num_of_owned_provinces_with = { area = mecca_area has_port = yes religion = catholic value = 2 } num_of_light_ship = 20 navy_size = 40",
+    "conditions": "Remain Catholic. Directly own 2 Catholic ports in Palestine and 2 in the Mecca area; field 40 ships including 20 light ships.",
+    "rewards": [
+      {
+        "script": "add_country_modifier = { name = teux_two_seas duration = 9125 }",
+        "text": "Two Seas: +5% trade efficiency (25 years)."
+      },
+      {
+        "script": "add_mercantilism = 2",
+        "text": "+2 mercantilism."
+      }
+    ],
+    "why": "A mature southern realm must connect and protect its two coastal networks.",
+    "root": "logistics",
+    "intermediate": false,
+    "icon": "mission_teux_s10",
+    "source": {
+      "url": "https://zamek.malbork.pl/en/museum/history-of-the-museum/",
+      "title": "Malbork Castle Museum",
+      "root": "Fortresses, stores, stables and workshops."
+    },
+    "arrowParents": [
+      "S09"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_s09"
+    ],
+    "checklistScript": "",
+    "effect": "add_country_modifier = { name = teux_two_seas duration = 9125 }\nadd_mercantilism = 2",
+    "conditionText": "Remain Catholic. Directly own 2 Catholic ports in Palestine and 2 in the Mecca area; field 40 ships including 20 light ships.",
+    "rewardText": "Two Seas: +5% trade efficiency (25 years). +2 mercantilism.",
+    "eventIds": [],
+    "claims": []
+  },
+  {
+    "id": "S11",
+    "scriptId": "teux_s11",
+    "title": "House of Saint Mary",
+    "lane": 1,
+    "position": 32,
+    "parents": [
+      "S04",
+      "V12"
+    ],
+    "trigger": "religion = catholic\n379 = { owned_by = ROOT religion = catholic has_building = cathedral development = 15 } num_of_owned_provinces_with = { OR = { region = mashriq_region region = egypt_region } religion = catholic has_building = cathedral value = 4 }",
+    "conditions": "Remain Catholic. Own Catholic Jerusalem with a cathedral and 15 development, and directly own at least 4 Catholic cathedral provinces across Mashriq/Egypt.",
+    "rewards": [
+      {
+        "script": "change_government_reform_progress = 100",
+        "text": "+100 government reform progress."
+      },
+      {
+        "script": "add_papal_influence = 20",
+        "text": "+20 papal influence."
+      }
+    ],
+    "why": "Return the Order\u2019s hospital identity to institutional form long after the city\u2019s capture.",
+    "root": "hospital",
+    "intermediate": false,
+    "icon": "mission_teux_s11",
+    "source": {
+      "url": "https://www.deutscher-orden.de/wer-wir-sind/erbe-und-auftrag",
+      "title": "The Order: roots and mission",
+      "root": "Hospital origins and pilgrim protection."
+    },
+    "arrowParents": [],
+    "checklistParents": [
+      "S04",
+      "V12"
+    ],
+    "gameParents": [],
+    "checklistScript": "mission_completed = teux_s04 mission_completed = teu_crusader_build_cathedrals",
+    "effect": "change_government_reform_progress = 100\nadd_papal_influence = 20",
+    "conditionText": "Remain Catholic. Own Catholic Jerusalem with a cathedral and 15 development, and directly own at least 4 Catholic cathedral provinces across Mashriq/Egypt.",
+    "rewardText": "+100 government reform progress. +20 papal influence.",
+    "eventIds": [],
+    "claims": []
+  },
+  {
+    "id": "S12",
+    "scriptId": "teux_s12",
+    "title": "Hospitaller Charter",
+    "lane": 2,
+    "position": 33,
+    "parents": [
+      "S10",
+      "S11"
+    ],
+    "trigger": "religion = catholic\nnum_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { OR = { region = mashriq_region region = egypt_region region = arabia_region } religion = catholic value = 25 } is_at_war = no religious_unity = 0.9 stability = 2 NOT = { overextension_percentage = 10 } NOT = { num_of_loans = 1 }",
+    "conditions": "Remain Catholic. Hold 25 Catholic provinces across Mashriq, Egypt and Arabia; be at peace with 90% religious unity, +2 stability, under 10% overextension and no loans.",
+    "rewards": [
+      {
+        "script": "country_event = { id = teux.12 }",
+        "text": "Event: The Hospitaller Charter. Choose one outcome; rewards do not stack.",
+        "event": "teux.12"
+      }
+    ],
+    "why": "A hard consolidation ending awards one modest permanent identity and can feed the wider Order\u2019s final chapter.",
+    "root": "hospital",
+    "intermediate": false,
+    "icon": "mission_teux_s12",
+    "source": {
+      "url": "https://www.deutscher-orden.de/wer-wir-sind/erbe-und-auftrag",
+      "title": "The Order: roots and mission",
+      "root": "Hospital origins and pilgrim protection."
+    },
+    "arrowParents": [
+      "S10",
+      "S11"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_s10",
+      "teux_s11"
+    ],
+    "checklistScript": "",
+    "effect": "country_event = { id = teux.12 }",
+    "conditionText": "Remain Catholic. Hold 25 Catholic provinces across Mashriq, Egypt and Arabia; be at peace with 90% religious unity, +2 stability, under 10% overextension and no loans.",
+    "rewardText": "Event: The Hospitaller Charter. Choose one outcome; rewards do not stack.",
+    "eventIds": [
+      "teux.12"
+    ],
+    "claims": []
+  },
+  {
+    "id": "C01",
+    "scriptId": "teux_c01",
+    "title": "The General Chapter",
+    "lane": 1,
+    "position": 10,
+    "parents": [
+      "V12",
+      "V28"
+    ],
+    "trigger": "religion = catholic\nnum_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {  religion = catholic value = 40 } if = { limit = { has_dlc = \"Common Sense\" } devotion = 80 } else = { stability = 2 }",
+    "conditions": "Remain Catholic. Hold 40 Catholic provinces with subjects and have 80 Devotion (+2 stability instead without Common Sense).",
+    "rewards": [
+      {
+        "script": "country_event = { id = teux.13 }",
+        "text": "Event: Priests and Knights. Choose one outcome; rewards do not stack.",
+        "event": "teux.13"
+      }
+    ],
+    "why": "The completed cathedral/conversion branches lead to a political event rather than a compulsory new war.",
+    "root": "administration",
+    "intermediate": false,
+    "icon": "mission_teux_c01",
+    "source": {
+      "url": "https://deutscher-orden.com/geschichte/",
+      "title": "The Order\u2019s own institutional history",
+      "root": "Commanderies and central administration."
+    },
+    "arrowParents": [],
+    "checklistParents": [
+      "V12",
+      "V28"
+    ],
+    "gameParents": [],
+    "checklistScript": "mission_completed = teu_crusader_build_cathedrals mission_completed = teu_crusader_convert_provinces",
+    "effect": "country_event = { id = teux.13 }",
+    "conditionText": "Remain Catholic. Hold 40 Catholic provinces with subjects and have 80 Devotion (+2 stability instead without Common Sense).",
+    "rewardText": "Event: Priests and Knights. Choose one outcome; rewards do not stack.",
+    "eventIds": [
+      "teux.13"
+    ],
+    "claims": []
+  },
+  {
+    "id": "C02",
+    "scriptId": "teux_c02",
+    "title": "A Common Treasury",
+    "lane": 0,
+    "position": 11,
+    "parents": [
+      "C01",
+      "V29"
+    ],
+    "trigger": "religion = catholic\nNOT = { is_in_deficit = yes } NOT = { num_of_loans = 1 } NOT = { corruption = 0.5 } treasury = 1000",
+    "conditions": "Remain Catholic. Have no deficit, no loans, corruption below 0.5, and 1,000 ducats.",
+    "rewards": [
+      {
+        "script": "add_treasury = -200",
+        "text": "-200 ducats."
+      },
+      {
+        "script": "add_country_modifier = { name = teux_common_treasury duration = 9125 }",
+        "text": "Common Treasury: -10% state maintenance (25 years)."
+      }
+    ],
+    "why": "Spend a manageable part of a proven surplus to lower the cost of governing the enlarged realm.",
+    "root": "administration",
+    "intermediate": false,
+    "icon": "mission_teux_c02",
+    "source": {
+      "url": "https://deutscher-orden.com/geschichte/",
+      "title": "The Order\u2019s own institutional history",
+      "root": "Commanderies and central administration."
+    },
+    "arrowParents": [
+      "C01"
+    ],
+    "checklistParents": [
+      "V29"
+    ],
+    "gameParents": [
+      "teux_c01"
+    ],
+    "checklistScript": "mission_completed = teu_crusader_gain_income",
+    "effect": "add_treasury = -200\nadd_country_modifier = { name = teux_common_treasury duration = 9125 }",
+    "conditionText": "Remain Catholic. Have no deficit, no loans, corruption below 0.5, and 1,000 ducats.",
+    "rewardText": "-200 ducats. Common Treasury: -10% state maintenance (25 years).",
+    "eventIds": [],
+    "claims": []
+  },
+  {
+    "id": "C03",
+    "scriptId": "teux_c03",
+    "title": "Visitors of the Order",
+    "lane": 1,
+    "position": 11,
+    "parents": [
+      "C01"
+    ],
+    "trigger": "religion = catholic\nnum_of_owned_provinces_with = {  religion = catholic has_tax_building_trigger = yes NOT = { unrest = 1 } NOT = { devastation = 1 } value = 20 }",
+    "conditions": "Remain Catholic. Directly own 20 Catholic church/cathedral provinces, each below 1 unrest and 1 devastation.",
+    "rewards": [
+      {
+        "script": "country_event = { id = teux.14 }",
+        "text": "Event: The Visitation Report. Choose one outcome; rewards do not stack.",
+        "event": "teux.14"
+      }
+    ],
+    "why": "Peaceful administration and the condition of provinces become the objective.",
+    "root": "administration",
+    "intermediate": false,
+    "icon": "mission_teux_c03",
+    "source": {
+      "url": "https://deutscher-orden.com/geschichte/",
+      "title": "The Order\u2019s own institutional history",
+      "root": "Commanderies and central administration."
+    },
+    "arrowParents": [
+      "C01"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_c01"
+    ],
+    "checklistScript": "",
+    "effect": "country_event = { id = teux.14 }",
+    "conditionText": "Remain Catholic. Directly own 20 Catholic church/cathedral provinces, each below 1 unrest and 1 devastation.",
+    "rewardText": "Event: The Visitation Report. Choose one outcome; rewards do not stack.",
+    "eventIds": [
+      "teux.14"
+    ],
+    "claims": []
+  },
+  {
+    "id": "C04",
+    "scriptId": "teux_c04",
+    "title": "A Learned Clergy",
+    "lane": 2,
+    "position": 11,
+    "parents": [
+      "C01",
+      "I08"
+    ],
+    "trigger": "religion = catholic\nuniversity = 8 cathedral = 12 theologian = 3",
+    "conditions": "Remain Catholic. Own 8 universities and 12 cathedrals, and employ a level-3-or-higher Theologian.",
+    "rewards": [
+      {
+        "script": "add_country_modifier = { name = teux_learned_clergy duration = 9125 }",
+        "text": "Learned Clergy: -5% advisor cost, +1 advisor pool (25 years)."
+      }
+    ],
+    "why": "The intermediate schools now support an institutional continuation beyond the vanilla cathedral ending.",
+    "root": "administration",
+    "intermediate": false,
+    "icon": "mission_teux_c04",
+    "source": {
+      "url": "https://deutscher-orden.com/geschichte/",
+      "title": "The Order\u2019s own institutional history",
+      "root": "Commanderies and central administration."
+    },
+    "arrowParents": [
+      "C01",
+      "I08"
+    ],
+    "checklistParents": [],
+    "gameParents": [
+      "teux_c01",
+      "teux_i08"
+    ],
+    "checklistScript": "",
+    "effect": "add_country_modifier = { name = teux_learned_clergy duration = 9125 }",
+    "conditionText": "Remain Catholic. Own 8 universities and 12 cathedrals, and employ a level-3-or-higher Theologian.",
+    "rewardText": "Learned Clergy: -5% advisor cost, +1 advisor pool (25 years).",
+    "eventIds": [],
+    "claims": []
+  },
+  {
+    "id": "C05",
+    "scriptId": "teux_c05",
+    "title": "The Rule Reaffirmed",
+    "lane": 1,
+    "position": 13,
+    "parents": [
+      "V32",
+      "C03"
+    ],
+    "trigger": "religion = catholic\nreligious_unity = 1 stability = 3 OR = { num_of_cardinals = 3 papal_influence = 80 }",
+    "conditions": "Remain Catholic. Have 100% religious unity, +3 stability, and either 3 cardinals or 80 papal influence.",
+    "rewards": [
+      {
+        "script": "country_event = { id = teux.15 }",
+        "text": "Event: The Rule Reaffirmed. Choose one outcome; rewards do not stack.",
+        "event": "teux.15"
+      }
+    ],
+    "why": "A demanding but optional European ending develops religious institutions without blocking Asia or Jerusalem.",
+    "root": "administration",
+    "intermediate": false,
+    "icon": "mission_teux_c05",
+    "source": {
+      "url": "https://deutscher-orden.com/geschichte/",
+      "title": "The Order\u2019s own institutional history",
+      "root": "Commanderies and central administration."
+    },
+    "arrowParents": [
+      "C03"
+    ],
+    "checklistParents": [
+      "V32"
+    ],
+    "gameParents": [
+      "teux_c03"
+    ],
+    "checklistScript": "mission_completed = teu_crusader_destroy_the_heresies",
+    "effect": "country_event = { id = teux.15 }",
+    "conditionText": "Remain Catholic. Have 100% religious unity, +3 stability, and either 3 cardinals or 80 papal influence.",
+    "rewardText": "Event: The Rule Reaffirmed. Choose one outcome; rewards do not stack.",
+    "eventIds": [
+      "teux.15"
+    ],
+    "claims": []
+  },
+  {
+    "id": "C06",
+    "scriptId": "teux_c06",
+    "title": "The Order\u2019s Arsenals",
+    "lane": 0,
+    "position": 12,
+    "parents": [
+      "V30",
+      "C02"
+    ],
+    "trigger": "religion = catholic\nweapons = 4 num_of_artillery = 40 mil_tech = 18",
+    "conditions": "Remain Catholic. Own 4 weapons manufactories, field 40 artillery regiments and reach military technology 18.",
+    "rewards": [
+      {
+        "script": "add_country_modifier = { name = teux_order_arsenals duration = 7300 }",
+        "text": "The Order\u2019s Arsenals: -10% artillery cost, +5% siege ability (20 years)."
+      }
+    ],
+    "why": "Fortification expertise and fiscal capacity support a temporary siege-logistics improvement.",
+    "root": "logistics",
+    "intermediate": false,
+    "icon": "mission_teux_c06",
+    "source": {
+      "url": "https://zamek.malbork.pl/en/museum/history-of-the-museum/",
+      "title": "Malbork Castle Museum",
+      "root": "Fortresses, stores, stables and workshops."
+    },
+    "arrowParents": [
+      "C02"
+    ],
+    "checklistParents": [
+      "V30"
+    ],
+    "gameParents": [
+      "teux_c02"
+    ],
+    "checklistScript": "mission_completed = teu_crusader_castle_expertise",
+    "effect": "add_country_modifier = { name = teux_order_arsenals duration = 7300 }",
+    "conditionText": "Remain Catholic. Own 4 weapons manufactories, field 40 artillery regiments and reach military technology 18.",
+    "rewardText": "The Order\u2019s Arsenals: -10% artillery cost, +5% siege ability (20 years).",
+    "eventIds": [],
+    "claims": []
+  },
+  {
+    "id": "C07",
+    "scriptId": "teux_c07",
+    "title": "A World of Chapters",
+    "lane": 4,
+    "position": 30,
+    "parents": [
+      "C03",
+      "C04"
+    ],
+    "trigger": "religion = catholic\nnum_of_cities = 150 religious_unity = 0.9 calc_true_if = { mission_completed = teux_n07 mission_completed = teux_e10 mission_completed = teux_m07 mission_completed = teux_s09 amount = 2 }",
+    "conditions": "Remain Catholic. Have 150 cities and 90% religious unity; complete any 2 of The Northern Rule, An Oceanic Order, A Southern Chapter and Arabian Concord.",
+    "rewards": [
+      {
+        "script": "add_country_modifier = { name = teux_world_chapters duration = -1 }",
+        "text": "A World of Chapters: -5% state maintenance (permanent)."
+      },
+      {
+        "script": "change_government_reform_progress = 100",
+        "text": "+100 government reform progress."
+      }
+    ],
+    "why": "Converge only two chosen theatres. The player does not have to conquer every frontier to build a coherent Order.",
+    "root": "administration",
+    "intermediate": false,
+    "icon": "mission_teux_c07",
+    "source": {
+      "url": "https://deutscher-orden.com/geschichte/",
+      "title": "The Order\u2019s own institutional history",
+      "root": "Commanderies and central administration."
+    },
+    "arrowParents": [],
+    "checklistParents": [
+      "C03",
+      "C04"
+    ],
+    "gameParents": [],
+    "checklistScript": "mission_completed = teux_c03 mission_completed = teux_c04",
+    "effect": "add_country_modifier = { name = teux_world_chapters duration = -1 }\nchange_government_reform_progress = 100",
+    "conditionText": "Remain Catholic. Have 150 cities and 90% religious unity; complete any 2 of The Northern Rule, An Oceanic Order, A Southern Chapter and Arabian Concord.",
+    "rewardText": "A World of Chapters: -5% state maintenance (permanent). +100 government reform progress.",
+    "eventIds": [],
+    "claims": []
+  },
+  {
+    "id": "C08",
+    "scriptId": "teux_c08",
+    "title": "The Last General Chapter",
+    "lane": 4,
+    "position": 36,
+    "parents": [
+      "C07",
+      "C06"
+    ],
+    "trigger": "religion = catholic\nis_at_war = no stability = 3 religious_unity = 0.95 NOT = { overextension_percentage = 10 } NOT = { num_of_loans = 1 } calc_true_if = { mission_completed = teux_n08 mission_completed = teux_e12 mission_completed = teux_m08 mission_completed = teux_s12 amount = 2 }",
+    "conditions": "Remain Catholic. Be at peace with +3 stability, 95% religious unity, below 10% overextension and no loans. Finish any 2 of A Northern See, A Second Centre, The Eastern Marshal and Hospitaller Charter.",
+    "rewards": [
+      {
+        "script": "country_event = { id = teux.16 }",
+        "text": "Event: The Last General Chapter. Choose one outcome; rewards do not stack.",
+        "event": "teux.16"
+      }
+    ],
+    "why": "The final administrative ending remains available through several campaign combinations.",
+    "root": "administration",
+    "intermediate": false,
+    "icon": "mission_teux_c08",
+    "source": {
+      "url": "https://deutscher-orden.com/geschichte/",
+      "title": "The Order\u2019s own institutional history",
+      "root": "Commanderies and central administration."
+    },
+    "arrowParents": [
+      "C07"
+    ],
+    "checklistParents": [
+      "C06"
+    ],
+    "gameParents": [
+      "teux_c07"
+    ],
+    "checklistScript": "mission_completed = teux_c06",
+    "effect": "country_event = { id = teux.16 }",
+    "conditionText": "Remain Catholic. Be at peace with +3 stability, 95% religious unity, below 10% overextension and no loans. Finish any 2 of A Northern See, A Second Centre, The Eastern Marshal and Hospitaller Charter.",
+    "rewardText": "Event: The Last General Chapter. Choose one outcome; rewards do not stack.",
+    "eventIds": [
+      "teux.16"
+    ],
+    "claims": []
+  }
+]

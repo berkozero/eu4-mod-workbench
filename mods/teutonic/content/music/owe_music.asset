@@ -1,0 +1,4 @@
+music = { name = "owe_chapter_at_dawn" file = "owe_chapter_at_dawn.ogg" }
+music = { name = "owe_lute_of_the_bailiwicks" file = "owe_lute_of_the_bailiwicks.ogg" }
+music = { name = "owe_lord_of_prussia" file = "owe_lord_of_prussia.ogg" }
+music = { name = "owe_feast_of_the_chapter" file = "owe_feast_of_the_chapter.ogg" }

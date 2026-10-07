@@ -1,0 +1,183 @@
+namespace = teux
+country_event = { id = teux.1 title = teux.1.t desc = teux.1.d picture = RELIGION_eventPicture is_triggered_only = yes
+ option = { name = teux.1.a
+add_country_modifier = { name = teux_russian_delegates duration = 9125 }
+ ai_chance = { factor = 1 } }
+ option = { name = teux.1.b
+add_country_modifier = { name = teux_russian_liturgy duration = 9125 }
+ ai_chance = { factor = 1 } }
+}
+country_event = { id = teux.2 title = teux.2.t desc = teux.2.d picture = RELIGION_eventPicture is_triggered_only = yes
+ option = { name = teux.2.a
+add_yearly_manpower = 0.5
+add_devotion = 10
+ ai_chance = { factor = 1 } }
+ option = { name = teux.2.b trigger = { treasury = 300 }
+add_treasury = -300
+add_country_modifier = { name = teux_oxus_stores duration = 7300 }
+ ai_chance = { factor = 1 } }
+}
+country_event = { id = teux.3 title = teux.3.t desc = teux.3.d picture = RELIGION_eventPicture is_triggered_only = yes
+ option = { name = teux.3.a
+add_country_modifier = { name = teux_persian_courts duration = 7300 }
+add_devotion = -10
+ ai_chance = { factor = 1 } }
+ option = { name = teux.3.b trigger = { treasury = 200 }
+add_country_modifier = { name = teux_persian_visitors duration = 5475 }
+add_treasury = -200
+ ai_chance = { factor = 1 } }
+}
+country_event = { id = teux.4 title = teux.4.t desc = teux.4.d picture = RELIGION_eventPicture is_triggered_only = yes
+ option = { name = teux.4.a
+522 = { add_base_production = 2 }
+add_years_of_income = 0.5
+ ai_chance = { factor = 1 } }
+ option = { name = teux.4.b trigger = { treasury = 250 }
+add_treasury = -250
+522 = { add_base_tax = 2 add_province_modifier = { name = teux_delhi_hospital duration = -1 } }
+add_papal_influence = 25
+ ai_chance = { factor = 1 } }
+}
+country_event = { id = teux.5 title = teux.5.t desc = teux.5.d picture = RELIGION_eventPicture is_triggered_only = yes
+ option = { name = teux.5.a
+add_country_modifier = { name = teux_second_centre duration = -1 }
+change_government_reform_progress = 100
+ ai_chance = { factor = 1 } }
+ option = { name = teux.5.b
+add_country_modifier = { name = teux_eastern_embassies duration = -1 }
+add_papal_influence = 40
+ ai_chance = { factor = 1 } }
+}
+country_event = { id = teux.6 title = teux.6.t desc = teux.6.d picture = RELIGION_eventPicture is_triggered_only = yes
+ option = { name = teux.6.a
+add_country_modifier = { name = teux_steppe_oaths duration = 7300 }
+add_devotion = -10
+ ai_chance = { factor = 1 } }
+ option = { name = teux.6.b trigger = { treasury = 200 }
+add_country_modifier = { name = teux_steppe_quarters duration = 7300 }
+add_treasury = -200
+ ai_chance = { factor = 1 } }
+}
+country_event = { id = teux.7 title = teux.7.t desc = teux.7.d picture = RELIGION_eventPicture is_triggered_only = yes
+ option = { name = teux.7.a
+1816 = { add_province_modifier = { name = teux_beijing_citadel duration = -1 } }
+ ai_chance = { factor = 1 } }
+ option = { name = teux.7.b
+1816 = { add_base_production = 2 add_devastation = -30 }
+change_government_reform_progress = 50
+ ai_chance = { factor = 1 } }
+}
+country_event = { id = teux.8 title = teux.8.t desc = teux.8.d picture = RELIGION_eventPicture is_triggered_only = yes
+ option = { name = teux.8.a
+remove_country_modifier = teu_crusader_mil_reform_4_mod
+add_country_modifier = { name = teux_doctrine_horse duration = -1 }
+ ai_chance = { factor = 1 } }
+ option = { name = teux.8.b
+remove_country_modifier = teu_crusader_mil_reform_4_mod
+add_country_modifier = { name = teux_doctrine_guns duration = -1 }
+ ai_chance = { factor = 1 } }
+ option = { name = teux.8.c
+remove_country_modifier = teu_crusader_mil_reform_4_mod
+add_country_modifier = { name = teux_doctrine_supply duration = -1 }
+ ai_chance = { factor = 1 } }
+}
+country_event = { id = teux.9 title = teux.9.t desc = teux.9.d picture = RELIGION_eventPicture is_triggered_only = yes
+ option = { name = teux.9.a
+1855 = { add_base_production = 1 add_devastation = -25 }
+define_advisor = { type = naval_reformer skill = 2 cost_multiplier = 0.5 religion = ROOT }
+ ai_chance = { factor = 1 } }
+ option = { name = teux.9.b trigger = { treasury = 200 }
+add_treasury = -200
+1855 = { add_province_modifier = { name = teux_acre_house duration = -1 } }
+add_papal_influence = 20
+ ai_chance = { factor = 1 } }
+}
+country_event = { id = teux.10 title = teux.10.t desc = teux.10.d picture = RELIGION_eventPicture is_triggered_only = yes
+ option = { name = teux.10.a
+add_country_modifier = { name = teux_jerusalem_pilgrims duration = 9125 }
+add_devotion = -10
+ ai_chance = { factor = 1 } }
+ option = { name = teux.10.b trigger = { treasury = 250 }
+add_treasury = -250
+add_country_modifier = { name = teux_jerusalem_hospitals duration = 9125 }
+ ai_chance = { factor = 1 } }
+}
+country_event = { id = teux.11 title = teux.11.t desc = teux.11.d picture = RELIGION_eventPicture is_triggered_only = yes
+ option = { name = teux.11.a
+add_country_modifier = { name = teux_arabian_envoys duration = 7300 }
+ ai_chance = { factor = 1 } }
+ option = { name = teux.11.b trigger = { treasury = 200 }
+add_treasury = -200
+every_owned_province = { limit = { region = arabia_region } add_province_modifier = { name = teux_arabian_forts duration = 9125 } }
+ ai_chance = { factor = 1 } }
+}
+country_event = { id = teux.12 title = teux.12.t desc = teux.12.d picture = RELIGION_eventPicture is_triggered_only = yes
+ option = { name = teux.12.a
+add_country_modifier = { name = teux_charter_pastoral duration = -1 }
+ ai_chance = { factor = 1 } }
+ option = { name = teux.12.b
+add_country_modifier = { name = teux_charter_hospital duration = -1 }
+ ai_chance = { factor = 1 } }
+ option = { name = teux.12.c
+add_country_modifier = { name = teux_charter_ports duration = -1 }
+ ai_chance = { factor = 1 } }
+}
+country_event = { id = teux.13 title = teux.13.t desc = teux.13.d picture = RELIGION_eventPicture is_triggered_only = yes
+ option = { name = teux.13.a
+change_government_reform_progress = 75
+if = { limit = { has_estate = estate_church } add_estate_loyalty = { estate = estate_church loyalty = -10 } }
+ ai_chance = { factor = 1 } }
+ option = { name = teux.13.b
+add_papal_influence = 50
+if = { limit = { has_estate = estate_nobles } add_estate_loyalty = { estate = estate_nobles loyalty = -10 } }
+ ai_chance = { factor = 1 } }
+}
+country_event = { id = teux.14 title = teux.14.t desc = teux.14.d picture = RELIGION_eventPicture is_triggered_only = yes
+ option = { name = teux.14.a
+add_country_modifier = { name = teux_visitation_delegation duration = 9125 }
+ ai_chance = { factor = 1 } }
+ option = { name = teux.14.b
+add_country_modifier = { name = teux_visitation_registers duration = 9125 }
+ ai_chance = { factor = 1 } }
+}
+country_event = { id = teux.15 title = teux.15.t desc = teux.15.d picture = RELIGION_eventPicture is_triggered_only = yes
+ option = { name = teux.15.a
+add_country_modifier = { name = teux_rule_clerical duration = -1 }
+ ai_chance = { factor = 1 } }
+ option = { name = teux.15.b
+add_country_modifier = { name = teux_rule_mediator duration = -1 }
+ ai_chance = { factor = 1 } }
+}
+country_event = { id = teux.16 title = teux.16.t desc = teux.16.d picture = RELIGION_eventPicture is_triggered_only = yes
+ option = { name = teux.16.a
+add_country_modifier = { name = teux_final_law duration = -1 }
+ ai_chance = { factor = 1 } }
+ option = { name = teux.16.b
+add_country_modifier = { name = teux_final_defence duration = -1 }
+ ai_chance = { factor = 1 } }
+ option = { name = teux.16.c
+add_country_modifier = { name = teux_final_fellowship duration = -1 }
+ ai_chance = { factor = 1 } }
+}
+country_event = { id = teux.90 title = teux.90.t desc = teux.90.d picture = RELIGION_eventPicture is_triggered_only = yes
+ option = { name = teux.90.a
+restore_country_name = yes
+ ai_chance = { factor = 1 } }
+ option = { name = teux.90.b trigger = { mission_completed = teux_s04 }
+override_country_name = TEUX_SAINT_MARY
+ ai_chance = { factor = 1 } }
+ option = { name = teux.90.c trigger = { mission_completed = teux_c07 }
+override_country_name = TEUX_ECUMENICAL
+ ai_chance = { factor = 1 } }
+}
+country_event = { id = teux.91 title = teux.91.t desc = teux.91.d picture = RELIGION_eventPicture is_triggered_only = yes
+ option = { name = teux.91.a
+restore_country_color = yes
+ ai_chance = { factor = 1 } }
+ option = { name = teux.91.b
+change_country_color = { color = { 210 207 188 } }
+ ai_chance = { factor = 1 } }
+ option = { name = teux.91.c
+change_country_color = { color = { 55 62 68 } }
+ ai_chance = { factor = 1 } }
+}

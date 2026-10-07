@@ -1,0 +1,6 @@
+{
+  "name": "eu4-mod-workbench",
+  "private": true,
+  "scripts": {"test:preview": "node tests/preview.cjs"},
+  "devDependencies": {"playwright": "1.58.2"}
+}

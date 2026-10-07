@@ -1,0 +1,170 @@
+owe_hospital = { local_unrest = -1 }
+owe_commandery = { local_tax_modifier = -0.05 local_unrest = -0.5 }
+owe_school = { local_institution_spread = 0.1 }
+owe_montfort = { local_defensiveness = 0.1 }
+owe_estates_concessions = { global_tax_modifier = -0.05 global_unrest = -1 }
+owe_estates_coercion = { global_tax_modifier = 0.05 global_unrest = 2 }
+owe_federal = { global_tax_modifier = -0.05 reduced_liberty_desire = 5 }
+owe_central = { global_tax_modifier = 0.05 reduced_liberty_desire = -5 }
+owe_amber_monopoly = { production_efficiency = 0.03 global_trade_power = -0.03 }
+owe_amber_license = { global_trade_power = 0.03 production_efficiency = -0.03 }
+owe_captive_pope = { global_unrest = 2 diplomatic_reputation = -1 }
+owe_fortress = { defensiveness = 0.05 }
+owe_frontier_term = { land_maintenance_modifier = -0.05 }
+owe_reform = { advisor_cost = -0.05 }
+owe_coercive_membership = { global_unrest = 1 global_tax_modifier = 0.03 }
+owe_reward_a11 = { land_maintenance_modifier = -0.05 }
+owe_reward_a12 = { reinforce_cost_modifier = -0.1 }
+owe_reward_a13 = { local_defensiveness = 0.1 }
+owe_reward_a14 = { land_morale = 0.05 }
+owe_reward_a22 = { improve_relation_modifier = 0.1 }
+owe_reward_a23 = { diplomatic_reputation = 1 }
+owe_reward_a24 = { reduced_liberty_desire = 5 }
+owe_reward_a32 = { global_unrest = -1 }
+owe_reward_a33 = { local_unrest = -1 local_tax_modifier = 0.1 }
+owe_reward_a34 = { yearly_corruption = -0.02 }
+owe_reward_a41 = { province_trade_power_modifier = 0.15 }
+owe_reward_a42 = { local_production_efficiency = 0.1 }
+owe_reward_a43 = { local_production_efficiency = 0.1 }
+owe_reward_a44 = { interest = -0.5 }
+owe_reward_a52 = { state_maintenance_modifier = -0.05 }
+owe_reward_a53 = { local_missionary_strength = 0.01 }
+owe_reward_a54 = { papal_influence = 0.5 }
+owe_reward_b12 = { land_attrition = -0.05 }
+owe_reward_b14 = { ship_trade_power_modifier = 0.1 }
+owe_reward_b21 = { advisor_cost = -0.05 }
+owe_reward_b22 = { local_unrest = -1 province_trade_power_modifier = 0.1 }
+owe_reward_b24 = { diplomatic_reputation = 1 }
+owe_reward_b31 = { local_unrest = -1 }
+owe_reward_b32 = { promote_culture_cost = -0.1 }
+owe_reward_b33 = { global_unrest = -1 }
+owe_reward_b34 = { global_trade_power = 0.05 }
+owe_reward_b41 = { province_trade_power_modifier = 0.1 }
+owe_reward_b42 = { trade_efficiency = 0.05 }
+owe_reward_b43 = { global_ship_cost = -0.1 }
+owe_reward_b44 = { naval_maintenance_modifier = -0.1 }
+owe_reward_b51 = { improve_relation_modifier = 0.15 }
+owe_reward_b52 = { local_tax_modifier = 0.1 }
+owe_reward_b53 = { advisor_cost = -0.05 }
+owe_reward_c11 = { reinforce_cost_modifier = -0.1 }
+owe_reward_c12 = { local_defensiveness = 0.15 }
+owe_reward_c13 = { infantry_power = 0.05 }
+owe_reward_c21 = { diplomatic_reputation = 1 }
+owe_reward_c22 = { reduced_liberty_desire = 5 }
+owe_reward_c23 = { local_manpower_modifier = 0.1 }
+owe_reward_c24 = { manpower_recovery_speed = 0.1 }
+owe_reward_c31 = { papal_influence = 1 }
+owe_reward_c33 = { reduced_liberty_desire = 10 }
+owe_reward_c34 = { land_attrition = -0.05 }
+owe_reward_c41 = { land_maintenance_modifier = -0.1 }
+owe_reward_c42 = { artillery_cost = -0.1 }
+owe_reward_c43 = { local_friendly_movement_speed = 0.1 }
+owe_reward_c51 = { manpower_recovery_speed = 0.1 }
+owe_reward_c52 = { tolerance_heretic = 1 }
+owe_reward_c54 = { improve_relation_modifier = 0.15 }
+owe_reward_d11 = { naval_attrition = -0.1 }
+owe_reward_d13 = { local_unrest = -1 }
+owe_reward_d14 = { local_tax_modifier = 0.1 local_unrest = -1 }
+owe_reward_d21 = { galley_power = 0.1 }
+owe_reward_d22 = { global_ship_repair = 0.1 }
+owe_reward_d23 = { local_unrest = -1 }
+owe_reward_d24 = { tolerance_heretic = 1 tolerance_heathen = 1 }
+owe_reward_d32 = { stability_cost_modifier = -0.1 }
+owe_reward_d33 = { idea_cost = -0.05 }
+owe_reward_d34 = { diplomatic_reputation = 1 }
+owe_reward_d41 = { naval_maintenance_modifier = -0.1 }
+owe_reward_d43 = { trade_efficiency = 0.1 }
+owe_reward_d44 = { local_ship_cost = -0.1 local_ship_repair = 0.15 }
+owe_reward_d51 = { prestige = 0.5 }
+owe_reward_d52 = { promote_culture_cost = -0.15 }
+owe_reward_d53 = { local_institution_spread = 0.15 }
+owe_reward_d54 = { global_unrest = -1 }
+owe_reward_e12 = { siege_ability = 0.05 }
+owe_reward_e13 = { land_morale = 0.1 }
+owe_reward_e14 = { improve_relation_modifier = 0.2 }
+owe_reward_e21 = { diplomatic_reputation = 1 }
+owe_reward_e23 = { ae_impact = -0.05 }
+owe_reward_e24 = { reduced_liberty_desire = 10 }
+owe_reward_e31 = { state_maintenance_modifier = -0.1 }
+owe_reward_e33 = { stability_cost_modifier = -0.15 }
+owe_reward_e34 = { governing_capacity = 100 }
+owe_reward_e41 = { interest = -0.5 }
+owe_reward_e42 = { artillery_cost = -0.15 }
+owe_reward_e43 = { trade_efficiency = 0.1 }
+owe_reward_e44 = { yearly_corruption = -0.05 }
+owe_reward_e51 = { global_unrest = -1 }
+owe_reward_e52 = { technology_cost = -0.05 }
+owe_reward_e54 = { num_accepted_cultures = 1 }
+owe_reward_f11 = { naval_attrition = -0.15 }
+owe_reward_f13 = { global_ship_repair = 0.15 }
+owe_reward_f14 = { heavy_ship_power = 0.1 }
+owe_reward_f21 = { tolerance_heathen = 1 }
+owe_reward_f22 = { local_development_cost = -0.1 }
+owe_reward_f23 = { improve_relation_modifier = 0.2 }
+owe_reward_f24 = { reduced_liberty_desire = 10 }
+owe_reward_f31 = { diplomatic_reputation = 1 }
+owe_reward_f33 = { yearly_corruption = -0.05 }
+owe_reward_f34 = { governing_capacity = 100 reduced_liberty_desire = 5 }
+owe_reward_f41 = { interest = -0.5 }
+owe_reward_f42 = { local_ship_repair = 0.15 province_trade_power_modifier = 0.1 }
+owe_reward_f43 = { trade_efficiency = 0.1 }
+owe_reward_f44 = { state_maintenance_modifier = -0.1 }
+owe_reward_f51 = { local_unrest = -1 }
+owe_reward_f52 = { tolerance_heretic = 1 tolerance_heathen = 1 }
+owe_reward_f53 = { promote_culture_cost = -0.2 }
+owe_reward_f54 = { global_unrest = -1 }
+owe_reward_g11 = { province_trade_power_modifier = 0.15 }
+owe_reward_g13 = { global_ship_cost = -0.1 }
+owe_reward_g14 = { ship_trade_power_modifier = 0.1 }
+owe_reward_g16 = { galley_power = 0.1 trade_efficiency = 0.05 }
+owe_reward_g22 = { province_trade_power_modifier = 0.15 }
+owe_reward_g24 = { land_attrition = -0.1 }
+owe_reward_g25 = { cavalry_cost = -0.1 }
+owe_reward_g26 = { defensiveness = 0.1 }
+owe_reward_g32 = { galley_power = 0.1 }
+owe_reward_g33 = { reinforce_cost_modifier = -0.1 }
+owe_reward_g35 = { province_trade_power_modifier = 0.2 }
+owe_reward_g36 = { local_production_efficiency = 0.1 }
+owe_reward_g41 = { improve_relation_modifier = 0.15 }
+owe_reward_g42 = { trade_efficiency = 0.05 }
+owe_reward_g45 = { papal_influence = 1 }
+owe_reward_g46 = { diplomatic_reputation = 1 global_unrest = -0.5 }
+owe_reward_g52 = { global_tariffs = 0.1 }
+owe_reward_g53 = { province_trade_power_modifier = 0.15 }
+owe_reward_g54 = { trade_efficiency = 0.1 }
+owe_reward_g55 = { ship_trade_power_modifier = 0.1 }
+owe_reward_g56 = { naval_maintenance_modifier = -0.1 }
+owe_reward_g52_direct = { province_trade_power_modifier = 0.1 }
+owe_arbitration_cooldown = { diplomatic_reputation = -0.5 }
+owe_town_charter = { local_tax_modifier = -0.1 local_unrest = -2 }
+owe_town_trial = { local_unrest = 2 local_tax_modifier = 0.05 }
+owe_border_truce = { improve_relation_modifier = 0.1 }
+owe_riga_liberties = { local_tax_modifier = -0.1 province_trade_power_modifier = 0.15 }
+owe_riga_command = { local_tax_modifier = 0.1 local_unrest = 2 }
+owe_unpaid_garrison = { land_morale = -0.03 }
+owe_open_wards = { local_unrest = -2 local_tax_modifier = -0.1 }
+owe_brothers_wards = { local_manpower_modifier = 0.1 local_tax_modifier = -0.05 }
+owe_jerusalem_custody = { local_unrest = -2 local_tax_modifier = -0.1 }
+owe_jerusalem_command = { local_defensiveness = 0.15 local_unrest = 2 }
+owe_elective_rule = { yearly_corruption = -0.02 }
+owe_life_tenures = { global_tax_modifier = -0.03 reduced_liberty_desire = 5 }
+owe_chapter_purge = { global_unrest = 1 reduced_liberty_desire = -5 }
+owe_public_accounts = { yearly_corruption = -0.03 global_tax_modifier = -0.03 }
+owe_indemnity = { global_unrest = 1 }
+owe_hospital_federation = { diplomatic_reputation = 1 global_tax_modifier = -0.03 }
+owe_temporal_protector = { governing_capacity_modifier = 0.05 reduced_liberty_desire = -5 }
+owe_compact_cooldown = { diplomatic_reputation = -0.25 }
+owe_station_stores = { province_trade_power_modifier = 0.1 }
+owe_relief_camp = { local_unrest = -1 }
+owe_circuit_court = { local_unrest = -0.5 }
+owe_underwritten_house = { local_build_cost = -0.1 }
+owe_appeal_settlement = { local_unrest = -1 }
+owe_faith_accommodation = { tolerance_heathen = 0.5 global_missionary_strength = -0.005 }
+owe_faith_missions = { global_missionary_strength = 0.005 tolerance_heathen = -0.5 }
+owe_provincial_recruitment = { advisor_cost = -0.05 }
+owe_european_peace = { reduced_liberty_desire = 5 }
+owe_pacific_accounts = { province_trade_power_modifier = 0.15 }
+owe_oceanic_marshal = { land_morale = 0.05 land_maintenance_modifier = 0.05 }
+owe_oceanic_spitler = { global_missionary_strength = 0.005 global_tax_modifier = -0.03 }
+owe_brethren_reserves = { reinforce_cost_modifier = -0.05 }
+owe_chaplain_college = { local_missionary_strength = 0.01 local_institution_spread = 0.1 }
