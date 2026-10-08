@@ -301,4 +301,4 @@
  teux_choose_livery_title:0 "Choose the Chapter Colours"
  teux_choose_livery_desc:0 "After the vanilla Holy Horde mission, choose a map colour. Cosmetic only; free and reversible."
  teux_refresh_tree_title:0 "Refresh the Extended Crusader Missions"
- teux_refresh_tree_desc:0 "Load the installed vanilla-plus-extension mission layout into an existing Teutonic save. If migrating from the retired 150-mission overhaul, this removes its old reward modifiers but preserves territory, claims and other campaign state; use a new campaign for a clean vanilla balance baseline. No new missions are completed by this decision."
+ teux_refresh_tree_desc:0 "Load the installed vanilla-plus-extension mission layout into an existing Teutonic save, including Jerusalem formed after choosing the Crusader path. If migrating from the retired 150-mission overhaul, this removes its old reward modifiers but preserves territory, claims and other campaign state; use a new campaign for a clean vanilla balance baseline. No new missions are completed by this decision."

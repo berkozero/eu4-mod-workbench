@@ -27,7 +27,7 @@ The installer test compares the launcher database and enabled-mod configuration 
 | One-image loading crash | More than one effective DDS entry and no loading-directory replace_path |
 | Launcher crash or other mods disabled | No writes to launcher state; copy and hash-verify only this mod; preserve configuration bytes |
 
-Claims metadata and historical prose still require review against the actual reward script. Modifier stacking, diplomacy, religious policies, AI behavior, all conditional costs and all native trigger types are not exhaustively simulated. The assignment evaluator covers a deliberately limited vocabulary; unsupported conditions fail rather than guess. The configured primary mission file is checked as a whole; this does not reconstruct every other DLC/generic tree or third-party mod's assignment precedence.
+Claims metadata and historical prose still require review against the actual reward script. Modifier stacking, diplomacy, religious policies, AI behavior, all conditional costs and all native trigger types are not exhaustively simulated. The assignment evaluator covers a deliberately limited vocabulary; unsupported conditions fail rather than guess. The configured primary mission file and any explicit `assignment_mission_files` are checked together; this does not reconstruct every other DLC/generic tree or third-party mod's assignment precedence.
 
 ## Browser checks
 

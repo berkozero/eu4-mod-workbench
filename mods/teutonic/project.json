@@ -8,7 +8,8 @@
   "base_mission_files": [
     "SCA_Teutonic_Missions.txt",
     "EMP_Prussian_Missions.txt",
-    "Brandenburgian_and_Prussian_Missions.txt"
+    "Brandenburgian_and_Prussian_Missions.txt",
+    "EMP_CrusaderMissions.txt"
   ],
   "primary_mission_file": "SCA_Teutonic_Missions.txt",
   "baseline_ids": {
@@ -102,7 +103,8 @@
   "base_sha256": {
     "SCA_Teutonic_Missions.txt": "e1ca246cb218674d611c0879369a8736bf27ce105b16ed89bacd3cb80297ae9d",
     "EMP_Prussian_Missions.txt": "4863989f35e42411f5b51e074414b00c2e83d2d33ddb64d2d3ddc1a6159143e5",
-    "Brandenburgian_and_Prussian_Missions.txt": "25b90a4362d65ecb1d8cce4de918f437c9aa6a15f09cbf3601d08f19bff1b4db"
+    "Brandenburgian_and_Prussian_Missions.txt": "25b90a4362d65ecb1d8cce4de918f437c9aa6a15f09cbf3601d08f19bff1b4db",
+    "EMP_CrusaderMissions.txt": "cae603b15848b707c61748f400c7025d3efb04d9ac830e4a2baa94dddd3ed97a"
   },
   "gated_baseline_ids": [
     "teu_crusader_clergy_influence",
@@ -174,6 +176,98 @@
     "random_map": {
       "state": {
         "tag": "TEU",
+        "random": true
+      },
+      "count": 0
+    },
+    "jerusalem_crusader": {
+      "state": {
+        "tag": "KOJ",
+        "was": [
+          "TEU"
+        ],
+        "flags": [
+          "teu_crusader_path"
+        ]
+      },
+      "count": 87,
+      "same_as_fixture": "crusader"
+    },
+    "jerusalem_native": {
+      "state": {
+        "tag": "KOJ"
+      },
+      "count": 17,
+      "same_as_game": "EMP_CrusaderMissions.txt"
+    },
+    "jerusalem_without_choice": {
+      "state": {
+        "tag": "KOJ",
+        "was": [
+          "TEU"
+        ]
+      },
+      "count": 17,
+      "same_as_game": "EMP_CrusaderMissions.txt"
+    },
+    "jerusalem_prussian": {
+      "state": {
+        "tag": "KOJ",
+        "was": [
+          "TEU"
+        ],
+        "flags": [
+          "teu_prussian_path"
+        ]
+      },
+      "count": 17,
+      "same_as_game": "EMP_CrusaderMissions.txt"
+    },
+    "jerusalem_foreign_crusader": {
+      "state": {
+        "tag": "KOJ",
+        "was": [
+          "KNI"
+        ],
+        "flags": [
+          "teu_crusader_path"
+        ]
+      },
+      "count": 17,
+      "same_as_game": "EMP_CrusaderMissions.txt"
+    },
+    "knights": {
+      "state": {
+        "tag": "KNI"
+      },
+      "count": 17,
+      "same_as_game": "EMP_CrusaderMissions.txt"
+    },
+    "jerusalem_missing_lotn": {
+      "state": {
+        "tag": "KOJ",
+        "was": [
+          "TEU"
+        ],
+        "flags": [
+          "teu_crusader_path"
+        ],
+        "dlcs": [
+          "Emperor"
+        ]
+      },
+      "count": 17,
+      "same_as_game": "EMP_CrusaderMissions.txt"
+    },
+    "jerusalem_random_map": {
+      "state": {
+        "tag": "KOJ",
+        "was": [
+          "TEU"
+        ],
+        "flags": [
+          "teu_crusader_path"
+        ],
         "random": true
       },
       "count": 0
@@ -249,5 +343,9 @@
       "M07"
     ]
   ],
-  "country_name": "Teutonic Order"
+  "country_name": "Teutonic Order",
+  "assignment_mission_files": [
+    "SCA_Teutonic_Missions.txt",
+    "EMP_CrusaderMissions.txt"
+  ]
 }
