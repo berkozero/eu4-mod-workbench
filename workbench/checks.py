@@ -30,7 +30,8 @@ def evaluate(ast,state):
         if k=='tag':return state.get('tag')==v
         if k=='was_tag':return v in state.get('was',[])
         if k=='has_country_flag':return v in state.get('flags',[])
-        if k=='has_dlc':return state.get('dlc',True)
+        if k=='has_dlc':return v.strip(chr(34)) in state['dlcs'] if 'dlcs' in state else state.get('dlc',True)
+        if k=='is_random_new_world':return state.get('random_new_world',False)==(v=='yes')
         if k=='map_setup':return state.get('random',False)
         if k=='has_mission':return v in state.get('missions',[])
         raise ValidationError('Fixture evaluator does not support '+k)
@@ -80,7 +81,7 @@ def load_order_check(mode):require(mode in ['custom','alphabetical','reverse-alp
 def verify(project,mod,game,specs,manifest):
     series=[]
     for path in (mod/'missions').glob('*.txt'):
-        if manifest.get('primary_mission_file') and path.name!=manifest['primary_mission_file']:continue
+        if path.name not in manifest.get('assignment_mission_files',[manifest.get('primary_mission_file',path.name)]):continue
         series+=series_nodes(parse(path.read_text(encoding='utf-8-sig')))
     state=dict(tag=manifest['tag']);nodes=assignment(series,state)
     aliases=dict(manifest.get('baseline_ids',{}));aliases.update({m['id']:m['scriptId'] for m in specs})
@@ -91,6 +92,10 @@ def verify(project,mod,game,specs,manifest):
     for label,fixture in manifest.get('fixtures',{}).items():
         found=assignment(series,fixture['state']);fixture_counts[label]=len(found)
         require(len(found)==fixture['count'],('Unexpected assignment',label,len(found)))
+        if 'same_as_fixture' in fixture:
+            expected=assignment(series,manifest['fixtures'][fixture['same_as_fixture']]['state'])
+            require(found==expected,('Changed continuation assignment',label))
+            require(not arrow_errors(found),('Invalid continuation arrows',label,arrow_errors(found)))
         if 'same_as_game' in fixture:
             native=series_nodes(parse((game/'missions'/fixture['same_as_game']).read_text(encoding='utf-8-sig')))
             require(set(found)==set(assignment(native,fixture['state'])),('Changed original assignment',label))

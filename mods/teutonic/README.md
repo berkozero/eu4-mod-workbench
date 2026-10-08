@@ -19,9 +19,10 @@ The source folder is portable with the repository's shared tools. A generated pa
 
 ## Compatibility and branch behavior
 
-- Reviewed against **EU4 1.37.2**; the manifest pins three native mission files. A changed base file stops compilation.
+- Reviewed against **EU4 1.37.2**; the manifest pins four native mission files. A changed base file stops compilation.
 - Requires **Lions of the North** for the Crusader route. Other mods replacing the same native mission files can conflict; the workbench does not resolve arbitrary mod load orders.
 - The Crusader tree is visible from the opening, but its missions still require choosing the Crusader path and satisfying the actual conditions. Visibility does not award claims or complete missions.
+- Jerusalem formed by a Teutonic Crusader retains the 87-mission committed campaign, including its opening prerequisites and custom decisions. Other Jerusalem origins keep their native missions. For a save that already lost the tree, use **Refresh the Extended Crusader Missions** after installing; completion retention in existing saves has not been runtime-tested.
 - The opening inspection contains 88 entries. After Crusader commitment, the optional Seek Imperial Protection entry disappears, leaving 87. The configured alternate Prussian assignment is preserved.
 - Original mission positions, icons, prerequisites, rewards and world conditions remain intact, apart from the explicit branch completion gate for early visibility.
 - The current layout uses 79 native arrows plus 21 earlier-milestone checklist requirements, preserving 100 logical parent relationships. Disconnected long arrows are not hidden behind browser-only routing.
